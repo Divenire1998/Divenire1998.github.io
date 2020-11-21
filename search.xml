@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>测试</title>
+      <link href="2020/11/19/%E6%B5%8B%E8%AF%95/"/>
+      <url>2020/11/19/%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<p>测试文章 <span class="math display">\[sssssa =s ada\]</span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Dev </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>非线性优化1--高斯牛顿法</title>
       <link href="2020/11/12/%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%96/%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%961%E2%80%94%E2%80%94%E9%AB%98%E6%96%AF%E7%89%9B%E9%A1%BF%E6%B3%95/"/>
       <url>2020/11/12/%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%96/%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%961%E2%80%94%E2%80%94%E9%AB%98%E6%96%AF%E7%89%9B%E9%A1%BF%E6%B3%95/</url>
@@ -17,33 +46,6 @@
           
       </categories>
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>基于Hexo的hexo-theme-matery主题搭建博客并优化</title>
-      <link href="2019/10/03/%E6%B5%8B%E8%AF%95/"/>
-      <url>2019/10/03/%E6%B5%8B%E8%AF%95/</url>
-      
-        <content type="html"><![CDATA[<p>测试文章 <span class="math display">\[sssssa =s ada \]</span></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> blog </tag>
-            
-            <tag> hexo </tag>
-            
-        </tags>
       
     </entry>
     
