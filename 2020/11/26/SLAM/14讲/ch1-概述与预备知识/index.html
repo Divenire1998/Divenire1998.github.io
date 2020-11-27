@@ -19,13 +19,12 @@
 
   <!-- 页面元数据 -->
   
-  <title>测试 - Divenire&#39;s Bolg</title>
-  
-    <meta name="keywords" content="Hexo,Blog">
+  <title>ch1-概述与预备知识 - Divenire&#39;s Bolg</title>
   
 
   
-    <meta name="description" content="这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要">
+    <meta name="description" content="视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch1和Ch2.">
   
 
   <!-- feed -->
@@ -551,7 +550,7 @@
     
     
       <h1 class="title">
-        测试
+        ch1-概述与预备知识
       </h1>
       <div class='new-meta-box'>
         
@@ -571,7 +570,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Cate/">Cate</a><span class="sep"></span><a class="category-link" href="/categories/Cate/SubCate/">SubCate</a>
+      <a class="category-link" href="/categories/SLAM/">SLAM</a><span class="sep"></span><a class="category-link" href="/categories/SLAM/14%E8%AE%B2/">14讲</a>
     </a>
   </div>
 
@@ -582,7 +581,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p> 2020年11月18日</p>
+    <p> 2020年11月25日</p>
   </a>
 </div>
 
@@ -593,13 +592,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：9字</p>
+      <p>字数：2.2k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：1分钟</p>
+      <p>时长：9分钟</p>
     </a>
   </div>
 
@@ -611,7 +610,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="测试" data-path="/2020/11/19/%E6%B5%8B%E8%AF%95/">
+      <div id="lc-pv" data-title="ch1-概述与预备知识" data-path="/2020/11/26/SLAM/14%E8%AE%B2/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次
@@ -628,9 +627,209 @@
 
 
   
-  <p>测试文章 <span class="math display">\[
-THIS \\ is \\a \\math \ expression
-\]</span></p>
+  <p>视觉SLAM14讲的课后习题以及深蓝的习题解答。</p>
+<p>本节对应十四讲中的Ch1和Ch2.</p>
+<a id="more"></a>
+<h2 id="课后习题">课后习题</h2>
+<h3 id="nop">1.1 Nop</h3>
+<h3 id="section">1.2</h3>
+<p>​ 在<strong>一维情况下</strong>，高斯概率密度函数表示为:</p>
+<p><span class="math display">\[
+p\left(x \mid \mu, \sigma^{2}\right)=\frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp \left(-\frac{1}{2} \frac{(x-\mu)^{2}}{\sigma^{2}}\right)
+\]</span> ​ 其中 <span class="math inline">\(\mu\)</span> 称为均值 (mean), <span class="math inline">\(\sigma^{2}\)</span> 为方差 (variance), <span class="math inline">\(\sigma\)</span> 称为标准差 (standard deviation)。</p>
+<p>​ <strong>多维变量</strong>的高斯分布如下 <span class="math display">\[
+p(x \mid \mu, \Sigma)=\frac{1}{\sqrt{(2 \pi)^{N} \operatorname{det} \Sigma}} \exp \left(-\frac{1}{2}(x-\mu)^{\mathrm{T}} \Sigma^{-1}(x-\mu)\right)
+\]</span> ​ 其中 <span class="math inline">\(\mu \in \mathbb{R}^{N}\)</span> 是均值, <span class="math inline">\(\Sigma \in \mathbb{R}^{N \times N}\)</span> 是协方差矩阵（<strong>对称正定矩阵</strong>）</p>
+<h3 id="nop-1">2.1 Nop</h3>
+<h3 id="nop-2">2.2 Nop</h3>
+<h3 id="section-1">2.6</h3>
+<p>​ 会出现<strong>undefined reference</strong>错误；</p>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126202731716.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126202731716.png" srcset="data:image/png;base64,666" alt="image-20201126202731716" /><figcaption>image-20201126202731716</figcaption>
+</figure>
+<h3 id="section-2">2.8</h3>
+<p><code>lib</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">工程目录</span><br><span class="line">.</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">├── inc</span><br><span class="line">│   └── libHelloSLAM.h</span><br><span class="line">├── install.sh</span><br><span class="line">└── src</span><br><span class="line">    └── libHelloSLAM.cpp</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 声明要求的 cmake 最低版本</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">2.8</span>)</span><br><span class="line"><span class="comment"># 声明一个 cmake 工程</span></span><br><span class="line"><span class="keyword">project</span>(hello)</span><br><span class="line"><span class="comment"># 设置编译模式</span></span><br><span class="line"><span class="keyword">set</span>(CMAKE_BUILD_TYPE Release)</span><br><span class="line"><span class="comment">############################################################</span></span><br><span class="line"><span class="comment"># Create a library</span></span><br><span class="line"><span class="comment">############################################################</span></span><br><span class="line"><span class="comment"># 动态库</span></span><br><span class="line"><span class="comment">#Generate the shared library from the library sources</span></span><br><span class="line"><span class="keyword">add_library</span>(hello SHARED </span><br><span class="line">    src/libHelloSLAM.cpp</span><br><span class="line">)</span><br><span class="line"><span class="keyword">target_include_directories</span>(hello</span><br><span class="line">    PUBLIC </span><br><span class="line">        <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/inc</span><br><span class="line">)</span><br><span class="line"><span class="comment">############################################################</span></span><br><span class="line"><span class="comment"># Install</span></span><br><span class="line"><span class="comment">############################################################</span></span><br><span class="line"><span class="comment"># Library</span></span><br><span class="line"><span class="comment"># <span class="doctag">Note:</span> may not work on windows</span></span><br><span class="line"><span class="keyword">install</span> (TARGETS hello</span><br><span class="line">    LIBRARY DESTINATION lib)</span><br><span class="line"><span class="comment"># Header files</span></span><br><span class="line"><span class="keyword">install</span>(DIRECTORY <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/inc/ </span><br><span class="line">    DESTINATION <span class="keyword">include</span>)</span><br></pre></td></tr></table></figure>
+<p><code>project</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#工程目录</span></span><br><span class="line">.</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">├── cmake_modules</span><br><span class="line">│   └── Findhello.cmake</span><br><span class="line">├── run.sh</span><br><span class="line">└── useHello.cpp</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#CMakeLists.txt</span></span><br><span class="line"><span class="comment"># 声明要求的 cmake 最低版本</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">2.8</span>)</span><br><span class="line"><span class="comment"># 声明一个 cmake 工程</span></span><br><span class="line"><span class="keyword">project</span>(HelloSlam)</span><br><span class="line"><span class="comment"># 设置编译模式</span></span><br><span class="line"><span class="keyword">set</span>(CMAKE_BUILD_TYPE Release)</span><br><span class="line"><span class="keyword">set</span>(CMAKE_MODULE_PATH <span class="string">&quot;$&#123;PROJECT_SOURCE_DIR&#125;/cmake_modules&quot;</span>)</span><br><span class="line"><span class="comment"># 寻找库文件</span></span><br><span class="line"><span class="keyword">find_package</span>(hello REQUIRED)</span><br><span class="line"><span class="keyword">include_directories</span>(<span class="variable">$&#123;HELLO_INCLUDE_DIR&#125;</span>)</span><br><span class="line"><span class="comment"># 添加可执行文件</span></span><br><span class="line"><span class="keyword">add_executable</span>(HelloSlam useHello.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span>   <span class="variable">$&#123;HELLO_LIBRARY&#125;</span>)</span><br><span class="line"><span class="keyword">message</span>(<span class="string">&quot;include dir:$&#123;HELLO_INCLUDE_DIR&#125;  lib dir:$&#123;HELLO_LIBRARY&#125; &quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Findhello.cmake</span></span><br><span class="line"><span class="comment"># 在指定目录下寻找头文件和动态库文件的位置，可以指定多个目标路径</span></span><br><span class="line"><span class="comment"># Find the header files</span></span><br><span class="line"><span class="keyword">FIND_PATH</span>(HELLO_INCLUDE_DIR </span><br><span class="line">NAMES libHelloSLAM.h</span><br><span class="line">PATHS /usr/local/<span class="keyword">include</span></span><br><span class="line">      /usr/<span class="keyword">include</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"># Find lib </span></span><br><span class="line"><span class="keyword">FIND_LIBRARY</span>(HELLO_LIBRARY</span><br><span class="line">NAMES hello</span><br><span class="line">PATHS /usr/local/lib</span><br><span class="line">      /usr/lib</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> (HELLO_INCLUDE_DIR <span class="keyword">AND</span> HELLO_LIBRARY)</span><br><span class="line">    <span class="keyword">set</span>(HELLO_FOUND <span class="keyword">TRUE</span>)</span><br><span class="line"><span class="keyword">endif</span> (HELLO_INCLUDE_DIR <span class="keyword">AND</span> HELLO_LIBRARY)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>工程文件见:<a target="_blank" rel="noopener" href="https://github.com/Divenire1998/vSLAM14_Practice/tree/master/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/Hello%20SLAM">Github</a></p>
+</blockquote>
+<h2 id="深蓝的课后习题">深蓝的课后习题</h2>
+<h3 id="熟悉linux">熟悉Linux</h3>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126123904656.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126123904656.png" srcset="data:image/png;base64,666" alt="熟悉Linux" /><figcaption>熟悉Linux</figcaption>
+</figure>
+<h4 id="如何在-ubuntu-中安装软件命令行界面它们通常被安装在什么地方">1. 如何在 Ubuntu 中安装软件(命令行界面)?它们通常被安装在什么地方?</h4>
+<ol type="1">
+<li><p><code>apt</code>安装方式，从系统软件源获取。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install packge-name</span><br><span class="line"><span class="comment"># 修复安装，如果遇到安装失败，或者报错可以尝试用这个命令</span></span><br><span class="line">sudo apt -f install packge-name</span><br></pre></td></tr></table></figure></li>
+<li><p><code>deb</code>软件包安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.使用dpkg  不自动处理依赖</span><br><span class="line">sudo dpkg -i packge-name.deb</span><br><span class="line">sudo apt install -f</span><br><span class="line"></span><br><span class="line">2.gdebi 自动处理依赖</span><br><span class="line">sudo gdebi packge-name.deb</span><br></pre></td></tr></table></figure></li>
+<li><p><code>rpm</code>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将rpm文件转为deb文件</span></span><br><span class="line">sudo alien packge-name.rpm</span><br><span class="line"><span class="comment"># dpkg命令安装</span></span><br><span class="line">sudo dpkg -i packge-name.deb</span><br></pre></td></tr></table></figure></li>
+<li><p><code>其他</code>安装方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">执行解压后文件夹的安装文件</span><br><span class="line">sudo .&#x2F;软件名* </span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr />
+<ol type="1">
+<li>安装后软件默认位置 /usr/share</li>
+<li>可执行文件位置 /usr/bin</li>
+<li>库文件位置 /usr/lib</li>
+</ol>
+<h4 id="linux-的环境变量是什么我如何定义新的环境变量">2. linux 的环境变量是什么?我如何定义新的环境变量?</h4>
+<p>环境变量是用来指定系统运行环境的一些参数，比如我们使用命令的路径，系统颜色等。</p>
+<blockquote>
+<p>常见环境变量如下所示：</p>
+<p>PATH：决定了shell将到哪些目录中寻找命令或程序</p>
+<p>HOME：当前用户主目录</p>
+<p>MAIL：是指当前用户的邮件存放目录。</p>
+<p>SHELL：是指当前用户用的是哪种Shell。</p>
+<p>HISTSIZE：是指保存历史命令记录的条数</p>
+<p>LOGNAME：是指当前用户的登录名。</p>
+<p>HOSTNAME：是指主机的名称，许多应用程序如果要用到主机名的话，通常是从这个环境变量中来取得的。</p>
+<p>LANG/LANGUGE：是和语言相关的环境变量，使用多种语言的用户可以修改此环境变量。</p>
+<p>PS1：是基本提示符，对于root用户是#，对于普通用户是$。</p>
+<p>PS2：是附属提示符，默认是“&gt;”。可以通过修改此环境变量来修改当前的命令符，比如下列命令会将提示符修改成字符串“Hello,MyNewPrompt:)”。</p>
+</blockquote>
+<hr />
+<p>以环境变量PATH为例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">定义新的变量/home/divenire/Gams</span><br><span class="line"><span class="built_in">export</span> PATH=/home/divenire/Gams:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<p>这种方式立即生效，但<strong>作用范围仅限当前终端</strong>，一旦当前终端关闭或在另一个终端中，则无效。</p>
+<p>因此也可以选择<strong>修改环境变量配置文件</strong>。</p>
+<blockquote>
+<p>环境变量配置文件中主要是定义对系统操作环境生效的系统默认环境变量，如PATH等；PATH、HISTSIZE、PS1、HOSTNAME等环境变量写入对应的环境变量配置文件；</p>
+</blockquote>
+<p>以环境变量PATH为例，修改对应的用户级环境变量配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.profile</span><br><span class="line"></span><br><span class="line"><span class="comment">#在文件末端加入</span></span><br><span class="line"><span class="built_in">export</span> PATH=/home/divenire/Gams:<span class="variable">$PATH</span></span><br><span class="line"><span class="comment">#保存，更新</span></span><br><span class="line"><span class="built_in">source</span> ~/.profile</span><br></pre></td></tr></table></figure>
+<h4 id="linux-根目录下面的目录结构是什么样的至少说出-3-个目录的用途">3. linux 根目录下面的目录结构是什么样的?至少说出 3 个目录的用途。</h4>
+<p><code>tree -L 1</code>根目录下目录结构如图所示。</p>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200919173309565.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200919173309565.png" srcset="data:image/png;base64,666" alt="image-20200919173309565" /><figcaption>image-20200919173309565</figcaption>
+</figure>
+<hr />
+<p><strong>./media</strong> 挂载可移动介质(media)，诸如CD、数码相机等用于挂载可移动设备的临时目录</p>
+<p><strong>./bin</strong> 重要的二进制 (binary) 应用程序,包含二进制文件，系统的所有用户使用的命令都在这个目录下。</p>
+<p><strong>./etc</strong> 配置文件、启动脚本等(etc)包含所有程序所需的配置文件，也包含了用于启动/停止单个程序的启动和关闭shell脚本</p>
+<h4 id="假设我要给-a.sh-加上可执行权限该输入什么命令">4. 假设我要给 a.sh 加上可执行权限,该输入什么命令?</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x a.sh</span><br></pre></td></tr></table></figure>
+<h4 id="假设我要将-a.sh-文件的所有者改成-xiangxiang该输入什么命令">5. 假设我要将 a.sh 文件的所有者改成 xiang:xiang,该输入什么命令?</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown  xiang:xiang  a.sh </span><br></pre></td></tr></table></figure>
+<h3 id="slam文献阅读">SLAM文献阅读</h3>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126123940729.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126123940729.png" srcset="data:image/png;base64,666" alt="SLAM文献阅读" /><figcaption>SLAM文献阅读</figcaption>
+</figure>
+<h4 id="slam-会在哪些场合中用到至少列举三个方向">1. SLAM 会在哪些场合中用到?至少列举三个方向。</h4>
+<ul>
+<li>三维重建，AR，VR</li>
+<li>无人驾驶</li>
+<li>移动机器人的自主导航与定位</li>
+</ul>
+<h4 id="slam-中定位与建图是什么关系为什么在定位的同时需要建图">2. SLAM 中定位与建图是什么关系?为什么在定位的同时需要建图?</h4>
+<p>​ 定位与建图是相互耦合的关系，只有明确了当前所在的位置，才能建立出准确的地图地图，反之只有在拥有准确地图的情况下，才能够根据周围的环境准确的判断出自身所在的位置。</p>
+<p>​ SLAM中采用上一个时刻的地图来估计此刻的位姿，并利用当前位姿更新地图，如此循环来解决定位与建图的问题。因此在定位的同时需要建地图。</p>
+<h4 id="slam-发展历史如何我们可以将它划分成哪几个阶段">3. SLAM 发展历史如何?我们可以将它划分成哪几个阶段?</h4>
+<ul>
+<li><p>古典时代（1986-2004年）经典时代引入了SLAM的主要概率公式，包括基于扩展卡尔曼滤波器、RaoBlackwelled粒子滤波器和最大似然估计的方法 。</p></li>
+<li><p>算法分析时代（2004-2015年）算法分析阶段研究了SLAM的基本性质，包括可观测性、收敛性和一致性 。</p></li>
+<li><p>我们正在进入SLAM的第三个时代，即鲁棒感知时代。</p></li>
+</ul>
+<h4 id="列举三篇在-slam-领域的经典文献">4. 列举三篇在 SLAM 领域的经典文献。</h4>
+<ul>
+<li>ORB-SLAM2:Mur-Artal R , Tardos J D . ORB-SLAM2: An Open-Source SLAM System for Monocular,Stereo, and RGB-D Cameras[J]. IEEE Transactions on Robotics, 2017:1-8.</li>
+<li>semi-direct visual odometry</li>
+<li>Large-Scale Direct Monocular SLAM</li>
+</ul>
+<h3 id="cmake练习">CMake练习</h3>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126124020051.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126124020051.png" srcset="data:image/png;base64,666" alt="image-20201126124020051" /><figcaption>image-20201126124020051</figcaption>
+</figure>
+<p>工程文件结构如下所示。</p>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920110302876.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920110302876.png" srcset="data:image/png;base64,666" alt="image-20200920110302876" /><figcaption>image-20200920110302876</figcaption>
+</figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">2.8</span>)</span><br><span class="line"><span class="keyword">SET</span>(CMAKE_BUILD_TYPE <span class="string">&quot;Release&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HELLO)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加头文件</span></span><br><span class="line"><span class="keyword">include_directories</span>(</span><br><span class="line">    <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/<span class="keyword">include</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加可执行文件</span></span><br><span class="line"><span class="keyword">ADD_EXECUTABLE</span>(sayhello  <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/src/useHello.cpp)</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加库 并链接</span></span><br><span class="line"><span class="keyword">add_library</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> SHARED src/hello.cpp)</span><br><span class="line"><span class="keyword">TARGET_LINK_LIBRARIES</span>(sayhello <span class="variable">$&#123;PROJECT_NAME&#125;</span>)</span><br><span class="line"><span class="comment">#设置库文件输出路径</span></span><br><span class="line"><span class="keyword">set</span>(CMAKE_LIBRARY_OUTPUT_DIRECTORY <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/lib)</span><br><span class="line"></span><br><span class="line"><span class="comment">#install</span></span><br><span class="line"><span class="keyword">INSTALL</span>(TARGETS <span class="variable">$&#123;PROJECT_NAME&#125;</span> LIBRARY DESTINATION /usr/local/lib)</span><br><span class="line"><span class="keyword">INSTALL</span>(FILES <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/<span class="keyword">include</span>/hello.h DESTINATION /usr/local/<span class="keyword">include</span>)</span><br></pre></td></tr></table></figure>
+<p>运行截图</p>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920111430221.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920111430221.png" srcset="data:image/png;base64,666" alt="image-20200920111430221" /><figcaption>image-20200920111430221</figcaption>
+</figure>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920111531133.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920111531133.png" srcset="data:image/png;base64,666" alt="image-20200920111531133" /><figcaption>image-20200920111531133</figcaption>
+</figure>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920111335182.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920111335182.png" srcset="data:image/png;base64,666" alt="image-20200920111335182" /><figcaption>image-20200920111335182</figcaption>
+</figure>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920111556695.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920111556695.png" srcset="data:image/png;base64,666" alt="image-20200920111556695" /><figcaption>image-20200920111556695</figcaption>
+</figure>
+<h3 id="理解orbslam框架">理解ORBSLAM框架</h3>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126124134268.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201126124134268.png" srcset="data:image/png;base64,666" alt="image-20201126124134268" /><figcaption>image-20201126124134268</figcaption>
+</figure>
+<hr />
+<h4 id="a-orb-slam2-将编译出什么结果有几个库文件和可执行文件">(a) ORB-SLAM2 将编译出什么结果?有几个库文件和可执行文件?</h4>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920093332487.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920093332487.png" srcset="data:image/png;base64,666" alt="image-20200920093332487" /><figcaption>image-20200920093332487</figcaption>
+</figure>
+<ul>
+<li>生成3个库文件</li>
+</ul>
+<ol type="1">
+<li><strong>lib/libORB_SLAM2.so</strong></li>
+<li><strong>Thirdparty/g2o/lib /libg2o.so</strong></li>
+<li><strong>Thirdparty/DBoW2/lib/libDBoW2.so</strong></li>
+</ol>
+<ul>
+<li>6个可执行文件</li>
+</ul>
+<ol type="1">
+<li><strong>Examples/Monocular/mono_euroc</strong></li>
+<li><strong>Examples/Monocular/mono_kitti</strong></li>
+<li><strong>Examples/Monocular/mono_tum</strong></li>
+<li><strong>Examples/RGB-D/rgbd_tum</strong></li>
+<li><strong>Examples/Stereo/stereo_euroc</strong></li>
+<li><strong>Examples/Stereo/stereo_kitti</strong></li>
+</ol>
+<h4 id="b-orb-slam2-中的-include-src-examples-三个文件夹中都含有什么内容">(b) ORB-SLAM2 中的 include, src, Examples 三个文件夹中都含有什么内容?</h4>
+<ul>
+<li>include文件夹中是ORB-SLAM2库的头文件;</li>
+<li>src文件夹中是是ORB-SLAM2库的源文件；</li>
+<li>Example文件夹中包含单目，RGBD，双目以及ROS的实例工程代码文件和相机参数文件，以及编译后的文件都保存在这儿。</li>
+</ul>
+<h4 id="c-orb-slam2-中的可执行文件链接到了哪些库它们的名字是什么">(c) ORB-SLAM2 中的可执行文件链接到了哪些库?它们的名字是什么?</h4>
+<ul>
+<li><p>lib/libORB_SLAM2.so</p>
+<p>ORB-SLAM2的库。</p></li>
+<li><p>Thirdparty/g2o/lib /libg2o.so</p>
+<p>g2o优化库，为第三方库文件。</p></li>
+<li><p>Thirdparty/DBoW2/lib/libDBoW2.so</p>
+<p>DboW2回环检测库，为第三方库文件。</p></li>
+</ul>
+<h3 id="摄像头运行orb-slam">摄像头运行ORB-SLAM</h3>
+<ul>
+<li>CMakeLists 修改方案。在工程目录下的CMakeLists.txt末尾加入如下代码。</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span>(CMAKE_RUNTIME_OUTPUT_DIRECTORY <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/Examples/myvideo)</span><br><span class="line"><span class="keyword">add_executable</span>(myvideo Examples/myvideo/myvideo.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(myvideo <span class="variable">$&#123;PROJECT_NAME&#125;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(myslam Examples/myvideo/myslam.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(myslam <span class="variable">$&#123;PROJECT_NAME&#125;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="使用电脑摄像头运行orb-slam">使用电脑摄像头运行ORB-SLAM</h4>
+<p>运行截图如下。</p>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920151100860.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920151100860.png" srcset="data:image/png;base64,666" alt="image-20200920151100860" /><figcaption>image-20200920151100860</figcaption>
+</figure>
+<h4 id="使用视频运行orb-slam">使用视频运行ORB-SLAM</h4>
+<p>运行截图如下</p>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920113608240.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20200920113608240.png" srcset="data:image/png;base64,666" alt="image-20200920113608240" /><figcaption>image-20200920113608240</figcaption>
+</figure>
+<h2 id="参考">参考</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32863631/article/details/76348963">linux中环境变量及环境变量配置文件详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/pengjunlee/article/details/81585726">Linux环境变量文件介绍</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yuzhaoblog/p/11225018.html">Linux添加新的环境变量</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/panchanggui/p/12037230.html">Linux根目录下各个目录的用途及含义</a></p>
+</blockquote>
 
   
   
@@ -648,7 +847,7 @@ THIS \\ is \\a \\math \ expression
               
             
               
-                <p>本文永久链接是：<a href=https://divenire.ltd/2020/11/19/%E6%B5%8B%E8%AF%95/>https://divenire.ltd/2020/11/19/%E6%B5%8B%E8%AF%95/</a></p>
+                <p>本文永久链接是：<a href=https://divenire.ltd/2020/11/26/SLAM/14%E8%AE%B2/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/>https://divenire.ltd/2020/11/26/SLAM/14%E8%AE%B2/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</a></p>
               
             
           </blockquote>
@@ -665,10 +864,10 @@ THIS \\ is \\a \\math \ expression
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-24T11:12:02+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-26T20:44:11+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年11月24日</p>
+    <p>更新于：2020年11月26日</p>
   </a>
 </div>
 
@@ -676,9 +875,6 @@ THIS \\ is \\a \\math \ expression
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Hexo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Blog/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Blog</p></a></div>
-
 
         
       
@@ -690,7 +886,8 @@ THIS \\ is \\a \\math \ expression
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://divenire.ltd/2020/11/19/%E6%B5%8B%E8%AF%95/&title=测试 - Divenire's Bolg&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://divenire.ltd/2020/11/26/SLAM/14%E8%AE%B2/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/&title=ch1-概述与预备知识 - Divenire's Bolg&summary=视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch1和Ch2."
           
           >
           
@@ -702,7 +899,8 @@ THIS \\ is \\a \\math \ expression
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://divenire.ltd/2020/11/19/%E6%B5%8B%E8%AF%95/&title=测试 - Divenire's Bolg&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://divenire.ltd/2020/11/26/SLAM/14%E8%AE%B2/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/&title=ch1-概述与预备知识 - Divenire's Bolg&summary=视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch1和Ch2."
           
           >
           
@@ -714,7 +912,8 @@ THIS \\ is \\a \\math \ expression
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://divenire.ltd/2020/11/19/%E6%B5%8B%E8%AF%95/&title=测试 - Divenire's Bolg&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://divenire.ltd/2020/11/26/SLAM/14%E8%AE%B2/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/&title=ch1-概述与预备知识 - Divenire's Bolg&summary=视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch1和Ch2."
           
           >
           
@@ -744,26 +943,13 @@ THIS \\ is \\a \\math \ expression
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/11/26/SLAM/14%E8%AE%B2/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>ch1-概述与预备知识</p>
-          <p class='content'>视觉SLAM14讲的课后习题以及深蓝的习题解答。
-本节对应十四讲中的Ch1和Ch2.
-
-课后习题
-1.1 Nop
-1.2
-​ 在一维情况下，高斯概率密度函数表示为:
-\[
-p\left(x \m...</p>
-        </a>
       
-      
-        <a class='next' href='/2020/11/12/%E6%95%B0%E5%AD%A6/%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%96/%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%961%E2%80%94%E2%80%94%E9%AB%98%E6%96%AF%E7%89%9B%E9%A1%BF%E6%B3%95/'>
-          <p class='title'>非线性优化1--高斯牛顿法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>高斯牛顿法的推导与应用实例。
-
-推导
-​ 假设观测到 \(\mathrm{N}\) 个数据点 \(\left\{\left(x_{1}, y_{1}\right),\left(x_{2}, y_...</p>
+        <a class='next' href='/2020/11/19/%E6%B5%8B%E8%AF%95/'>
+          <p class='title'>测试<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>测试文章 \[
+THIS \\ is \\a \\math \ expression
+\]
+</p>
         </a>
       
     </div>
@@ -911,6 +1097,20 @@ p\left(x \m...</p>
 
 
 
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98"><span class="toc-text">课后习题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nop"><span class="toc-text">1.1 Nop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section"><span class="toc-text">1.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nop-1"><span class="toc-text">2.1 Nop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nop-2"><span class="toc-text">2.2 Nop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-1"><span class="toc-text">2.6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-2"><span class="toc-text">2.8</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E8%93%9D%E7%9A%84%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98"><span class="toc-text">深蓝的课后习题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%9F%E6%82%89linux"><span class="toc-text">熟悉Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8-ubuntu-%E4%B8%AD%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%95%8C%E9%9D%A2%E5%AE%83%E4%BB%AC%E9%80%9A%E5%B8%B8%E8%A2%AB%E5%AE%89%E8%A3%85%E5%9C%A8%E4%BB%80%E4%B9%88%E5%9C%B0%E6%96%B9"><span class="toc-text">1. 如何在 Ubuntu 中安装软件(命令行界面)?它们通常被安装在什么地方?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#linux-%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%98%AF%E4%BB%80%E4%B9%88%E6%88%91%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%96%B0%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">2. linux 的环境变量是什么?我如何定义新的环境变量?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#linux-%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%87%B3%E5%B0%91%E8%AF%B4%E5%87%BA-3-%E4%B8%AA%E7%9B%AE%E5%BD%95%E7%9A%84%E7%94%A8%E9%80%94"><span class="toc-text">3. linux 根目录下面的目录结构是什么样的?至少说出 3 个目录的用途。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E6%88%91%E8%A6%81%E7%BB%99-a.sh-%E5%8A%A0%E4%B8%8A%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90%E8%AF%A5%E8%BE%93%E5%85%A5%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-text">4. 假设我要给 a.sh 加上可执行权限,该输入什么命令?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E6%88%91%E8%A6%81%E5%B0%86-a.sh-%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%80%E6%9C%89%E8%80%85%E6%94%B9%E6%88%90-xiangxiang%E8%AF%A5%E8%BE%93%E5%85%A5%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-text">5. 假设我要将 a.sh 文件的所有者改成 xiang:xiang,该输入什么命令?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#slam%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB"><span class="toc-text">SLAM文献阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#slam-%E4%BC%9A%E5%9C%A8%E5%93%AA%E4%BA%9B%E5%9C%BA%E5%90%88%E4%B8%AD%E7%94%A8%E5%88%B0%E8%87%B3%E5%B0%91%E5%88%97%E4%B8%BE%E4%B8%89%E4%B8%AA%E6%96%B9%E5%90%91"><span class="toc-text">1. SLAM 会在哪些场合中用到?至少列举三个方向。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#slam-%E4%B8%AD%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%BB%BA%E5%9B%BE%E6%98%AF%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E5%AE%9A%E4%BD%8D%E7%9A%84%E5%90%8C%E6%97%B6%E9%9C%80%E8%A6%81%E5%BB%BA%E5%9B%BE"><span class="toc-text">2. SLAM 中定位与建图是什么关系?为什么在定位的同时需要建图?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#slam-%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2%E5%A6%82%E4%BD%95%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E5%B0%86%E5%AE%83%E5%88%92%E5%88%86%E6%88%90%E5%93%AA%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="toc-text">3. SLAM 发展历史如何?我们可以将它划分成哪几个阶段?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E4%B8%BE%E4%B8%89%E7%AF%87%E5%9C%A8-slam-%E9%A2%86%E5%9F%9F%E7%9A%84%E7%BB%8F%E5%85%B8%E6%96%87%E7%8C%AE"><span class="toc-text">4. 列举三篇在 SLAM 领域的经典文献。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cmake%E7%BB%83%E4%B9%A0"><span class="toc-text">CMake练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E8%A7%A3orbslam%E6%A1%86%E6%9E%B6"><span class="toc-text">理解ORBSLAM框架</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a-orb-slam2-%E5%B0%86%E7%BC%96%E8%AF%91%E5%87%BA%E4%BB%80%E4%B9%88%E7%BB%93%E6%9E%9C%E6%9C%89%E5%87%A0%E4%B8%AA%E5%BA%93%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6"><span class="toc-text">(a) ORB-SLAM2 将编译出什么结果?有几个库文件和可执行文件?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#b-orb-slam2-%E4%B8%AD%E7%9A%84-include-src-examples-%E4%B8%89%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E9%83%BD%E5%90%AB%E6%9C%89%E4%BB%80%E4%B9%88%E5%86%85%E5%AE%B9"><span class="toc-text">(b) ORB-SLAM2 中的 include, src, Examples 三个文件夹中都含有什么内容?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#c-orb-slam2-%E4%B8%AD%E7%9A%84%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E9%93%BE%E6%8E%A5%E5%88%B0%E4%BA%86%E5%93%AA%E4%BA%9B%E5%BA%93%E5%AE%83%E4%BB%AC%E7%9A%84%E5%90%8D%E5%AD%97%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">(c) ORB-SLAM2 中的可执行文件链接到了哪些库?它们的名字是什么?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%91%84%E5%83%8F%E5%A4%B4%E8%BF%90%E8%A1%8Corb-slam"><span class="toc-text">摄像头运行ORB-SLAM</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E6%91%84%E5%83%8F%E5%A4%B4%E8%BF%90%E8%A1%8Corb-slam"><span class="toc-text">使用电脑摄像头运行ORB-SLAM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%A7%86%E9%A2%91%E8%BF%90%E8%A1%8Corb-slam"><span class="toc-text">使用视频运行ORB-SLAM</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </section>
+
 
   
 
@@ -927,7 +1127,7 @@ p\left(x \m...</p>
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="测试";
+  pdata.postTitle="ch1-概述与预备知识";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
