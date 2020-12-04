@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-    <meta name="robots" content="noindex,nofollow">
+    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -19,9 +19,11 @@
 
   <!-- 页面元数据 -->
   
-  <title>404 Not Found - Divenire&#39;s Bolg</title>
+  <title>ORB-SLAM2环境配置 - Divenire&#39;s Bolg</title>
   
 
+  
+    <meta name="description" content="ORB-SLAM2的环境配置。">
   
 
   <!-- feed -->
@@ -73,13 +75,15 @@
 <body>
   
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -88,9 +92,9 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
           
           
+            Divenire's Blog
           
         </a>
       
@@ -458,7 +462,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper page search' style="display: ;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -534,8 +538,8 @@
       <div class='body-wrapper' id="pjax-container">
         
 
-<div class='l_main no_sidebar'>
-  <article class="article post white-box reveal md shadow article-type-page" id="page" itemscope itemprop="blogPost">
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
 
 
@@ -544,15 +548,173 @@
     
     
     
+      <h1 class="title">
+        ORB-SLAM2环境配置
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png">
+    <p>Divenire</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/SLAM/">SLAM</a><span class="sep"></span><a class="category-link" href="/categories/SLAM/ORB-SLAM2/">ORB-SLAM2</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p> 2020年11月28日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：584字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：2分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="ORB-SLAM2环境配置" data-path="/2020/11/28/SLAM/ORB-SLAM2/ORB-SLAM2%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
   </div>
 
 
   
-  <p class='p logo center huge'>404</p>
-<p class='p center bold'>很抱歉，您访问的页面不存在</p>
-<p class='p center small'>可能是输入地址有误或该地址已被删除</p>
+  <p>ORB-SLAM2的环境配置。</p>
+<a id="more"></a>
+<h2 id="eigen">EIGEN</h2>
+<ul>
+<li>卸载原有的Eigen版本</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看原有的Eiegn位置</span></span><br><span class="line">sudo updatedb  </span><br><span class="line">locate eigen3  </span><br><span class="line"></span><br><span class="line"><span class="comment">#卸载</span></span><br><span class="line">sudo rm -rf /usr/include/eigen3</span><br><span class="line">sudo rm -rf /usr/lib/cmake/eigen3</span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/include/eigen3</span><br><span class="line">sudo rm -rf /usr/share/doc/libeigen3-dev </span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/share/eigen3</span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/share/pkgconfig/eigen3.pc /usr/share/pkgconfig/eigen3.pc /var/lib/dpkg/info/libeigen3-dev.list /var/lib/dpkg/info/libeigen3-dev.md5sums</span><br><span class="line"></span><br><span class="line"><span class="comment">#重新查看Eiegn位置</span></span><br><span class="line">sudo updatedb  </span><br><span class="line">locate eigen3  </span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装Eigen3.3.8</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cmake -H. -Bbuild</span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line">sudo make install</span><br><span class="line"><span class="comment"># eigen安装默认的地址是：/usr/local/include里 ，我们在安装pangolin时，会在/usr/include 目录下进行搜索eigen，导致pangolin安装失败，通常我们复制一份在、usr/include上面命令可以解决:</span></span><br><span class="line"></span><br><span class="line">sudo cp -r /usr/<span class="built_in">local</span>/include/eigen3 /usr/include </span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改FindEigen.Cmake文件，实现多版本共存</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">find_path</span>(EIGEN3_INCLUDE_DIR NAMES signature_of_eigen3_matrix_library</span><br><span class="line">PATHS</span><br><span class="line"><span class="comment"># 写eigen的路径</span></span><br><span class="line">/media/divenire/D/<span class="number">0</span>_Divenire/Workspace/LIB/EIGEN/eigen-<span class="number">3.3</span>.<span class="number">8</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="opencv">OPENCV</h2>
+<ul>
+<li>OEPNCV 3.4.12 下载、安装</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 临时代理</span></span><br><span class="line"><span class="built_in">export</span> http_proxy=<span class="string">&quot;http://127.0.0.1:12333&quot;</span></span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="string">&quot;http://127.0.0.1:12333&quot;</span></span><br><span class="line"><span class="comment"># 使用wget</span></span><br><span class="line">wget opencv_address</span><br></pre></td></tr></table></figure>
+<ul>
+<li>编译</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmake -H. -Bbuild</span><br><span class="line">cmake --build build -j12</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改CMakeList 指定OPENCV版本和路径</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置到自己的OPENCV路径</span></span><br><span class="line"><span class="built_in">set</span>(OpenCV_DIR <span class="string">&quot;/media/divenire/D/0_Divenire/Workspace/LIB/OPENCV/3.4.12/opencv-3.4.12/builds&quot;</span>)</span><br><span class="line">find_package(OpenCV  REQUIRED)</span><br></pre></td></tr></table></figure>
+<h2 id="pangolin">PANGOLIN</h2>
+<ul>
+<li><p>下载PANGOLIN</p></li>
+<li><p>编译</p></li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmake -H. -Bbuild</span><br><span class="line">cmake --build build -j12</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改CMakeList 指定PANGOLIN版本和路径</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置到自己的PANGOLIN路径</span></span><br><span class="line"><span class="built_in">set</span>(Pangolin_DIR <span class="string">&quot;/media/divenire/D/0_Divenire/Workspace/LIB/Pangolin/build/src&quot;</span>)</span><br><span class="line">find_package(Pangolin REQUIRED)</span><br></pre></td></tr></table></figure>
+<h2 id="orbslam2">ORBSLAM2</h2>
+<h3 id="编译">编译</h3>
+<p>最好分开编译，先编译第三方的文件夹的G2O那些库(修改编译第三方库的Cmake配置)。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./build.sh</span><br></pre></td></tr></table></figure>
+<h3 id="数据集">数据集</h3>
+<ul>
+<li>单目&amp;双目</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压下载的数据集</span></span><br><span class="line"><span class="comment"># 把TUMX换成对应的相机参数设置</span></span><br><span class="line">./Examples/Monocular/mono_tum ./Vocabulary/ORBvoc.txt ./Examples/Monocular/TUMX.yaml &#123;数据集路径(解压后的文件夹)&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>RGB-D</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 建立关联</span></span><br><span class="line">python associate.py PATH_TO_SEQUENCE/rgb.txt PATH_TO_SEQUENCE/depth.txt &gt; associations.txt</span><br><span class="line"><span class="comment"># 把TUMX换成对应的相机参数设置</span></span><br><span class="line">./Examples/RGB-D/rgbd_tum Vocabulary/ORBvoc.txt Examples/RGB-D/TUMX.yaml PATH_TO_SEQUENCE_FOLDER ASSOCIATIONS_FILE</span><br></pre></td></tr></table></figure>
+<h3 id="摄像头视频">摄像头&amp;视频</h3>
+<p>CMakeLists 修改方案。在工程目录下的CMakeLists.txt末尾加入如下代码。</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span>(CMAKE_RUNTIME_OUTPUT_DIRECTORY <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/Examples/myvideo)</span><br><span class="line"><span class="keyword">add_executable</span>(myvideo Examples/myvideo/myvideo.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(myvideo <span class="variable">$&#123;PROJECT_NAME&#125;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(myslam Examples/myvideo/myslam.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(myslam <span class="variable">$&#123;PROJECT_NAME&#125;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>摄像头</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./Examples/myvideo/myslam ./Vocabulary/ORBvoc.txt ./Examples/myvideo/myslam.yaml</span><br></pre></td></tr></table></figure>
+<ul>
+<li>视频</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./Examples/myvideo/myvideo ./Vocabulary/ORBvoc.txt ./Examples/myvideo/myvideo.yaml Examples/myvideo/myvideo.mp4</span><br></pre></td></tr></table></figure>
+<h2 id="参考">参考</h2>
+<p><a target="_blank" rel="noopener" href="https://vision.in.tum.de/data/datasets/rgbd-dataset/tools">TUM工具-误差评估-关联</a></p>
 
   
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://divenire.ltd/2020/11/28/SLAM/ORB-SLAM2/ORB-SLAM2%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/>https://divenire.ltd/2020/11/28/SLAM/ORB-SLAM2/ORB-SLAM2%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
   
   
     
@@ -561,6 +723,73 @@
   <div class='article-meta' id="bottom">
     <div class='new-meta-box'>
       
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-30T11:45:18+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年11月30日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://divenire.ltd/2020/11/28/SLAM/ORB-SLAM2/ORB-SLAM2%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=ORB-SLAM2环境配置 - Divenire's Bolg&summary=ORB-SLAM2的环境配置。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://divenire.ltd/2020/11/28/SLAM/ORB-SLAM2/ORB-SLAM2%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=ORB-SLAM2环境配置 - Divenire's Bolg&summary=ORB-SLAM2的环境配置。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://divenire.ltd/2020/11/28/SLAM/ORB-SLAM2/ORB-SLAM2%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=ORB-SLAM2环境配置 - Divenire's Bolg&summary=ORB-SLAM2的环境配置。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
     </div>
   </div>
 
@@ -568,6 +797,32 @@
   
   
 
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2020/11/29/SLAM/14%E8%AE%B2/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>ch1-概述与预备知识</p>
+          <p class='content'>视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch1和Ch2.
+
+深蓝的课后习题
+熟悉Linux
+
+熟悉Linux
+
+1. 如何在 Ubuntu 中安装软件(命令行界面)?...</p>
+        </a>
+      
+      
+        <a class='next' href='/2020/11/19/%E6%B5%8B%E8%AF%95/'>
+          <p class='title'>测试<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>测试文章 \[
+THIS \\ is \\a \\math \ expression
+\]
+</p>
+        </a>
+      
+    </div>
   
 </article>
 
@@ -580,10 +835,155 @@
 
 
 
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
 
 </div>
 <aside class='l_side'>
   
+  
+    
+    
+
+<section class="widget blogger shadow desktop mobile">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/TIM图片20200123173409.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">Divenire's Bolg</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://github.com/divenire1998"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:qiuyue_online@163.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=400473319"
+              class="social fas fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#eigen"><span class="toc-text">EIGEN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#opencv"><span class="toc-text">OPENCV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pangolin"><span class="toc-text">PANGOLIN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#orbslam2"><span class="toc-text">ORBSLAM2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91"><span class="toc-text">编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%91%84%E5%83%8F%E5%A4%B4%E8%A7%86%E9%A2%91"><span class="toc-text">摄像头&amp;视频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
 
 </aside>
 
@@ -596,14 +996,14 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="ORB-SLAM2环境配置";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
 </script>
 
@@ -628,8 +1028,8 @@
       fixed='false'
       list-max-height='320px'
       server='netease'
-      type='playlist'
-      id='3175833810'
+      type='song'
+      id='480780998'
       list-folded='true'>
     </meting-js>
   
@@ -1020,7 +1420,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   <script>
   let APlayerController = new Object();
-  APlayerController.id = '3175833810';  // 设定全局音乐播放ID
+  APlayerController.id = '480780998';  // 设定全局音乐播放ID
   APlayerController.volume = '0.7';
 </script>
 

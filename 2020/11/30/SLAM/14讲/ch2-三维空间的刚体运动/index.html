@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,9 +19,12 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：centOS - Divenire&#39;s Bolg</title>
+  <title>ch2-三维空间的刚体运动 - Divenire&#39;s Bolg</title>
   
 
+  
+    <meta name="description" content="视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch3.">
   
 
   <!-- feed -->
@@ -92,9 +93,9 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
           
           
+            Divenire's Blog
           
         </a>
       
@@ -462,7 +463,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  search' style="display: none;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -538,77 +539,655 @@
       <div class='body-wrapper' id="pjax-container">
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        ch2-三维空间的刚体运动
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png">
+    <p>Divenire</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2017/12/03/%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/">
-        CentOS7下Tomcat启动慢的原因及解决方案
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>啦啦啦啦</p>
-    
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/SLAM/">SLAM</a><span class="sep"></span><a class="category-link" href="/categories/SLAM/14%E8%AE%B2/">14讲</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
           
-          <a class='avatar' href='/'><img src='https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png'></a>
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p> 2020年11月29日</p>
+  </a>
+</div>
+
+          
         
-        <time>2017-12-02</time>
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：3k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：16分钟</p>
+    </a>
+  </div>
+
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">云服务器</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="ch2-三维空间的刚体运动" data-path="/2020/11/30/SLAM/14%E8%AE%B2/ch2-%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>视觉SLAM14讲的课后习题以及深蓝的习题解答。</p>
+<p>本节对应十四讲中的Ch3.</p>
+<a id="more"></a>
+<h2 id="深蓝的课后习题">深蓝的课后习题</h2>
+<h3 id="熟悉-eigen-矩阵运算">熟悉 Eigen 矩阵运算</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171241674.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171241674.png" srcset="data:image/png;base64,666" alt="image-20201202171241674" style="zoom:67%;" /></p>
+<p><strong>一、</strong></p>
+<p>​ 由于<span class="math inline">\(A\)</span>是方阵，因此<span class="math inline">\(Ax = b\)</span>有唯一解的的充分必要条件为：矩阵<span class="math inline">\(A\)</span>的行列式<span class="math inline">\(d=|A|\neq0\)</span>(<strong>克拉默法则</strong>)。</p>
+<p>​ 从秩的角度来说有唯一解的条件是<span class="math inline">\(Rank(A,b) = Rank(A)=n\)</span>。</p>
+<p><strong>二、</strong></p>
+<p>​ 利用线性方程组的初等行变换进行消元、化简。对于<span class="math inline">\(Ax=b\)</span>其核心思想是把A转换成一个三角矩阵，然后再进行正向代入法，或反向代入法求解。</p>
+<p><strong>三、</strong></p>
+<p>​ 对于矩阵<span class="math inline">\(A \in \mathbb{R}^{m \times n}, m \geq n\)</span>，其可被分解为<span class="math inline">\(A=QR\)</span>,其中：</p>
+<ul>
+<li><span class="math inline">\(Q \in \mathbb{R}^{m \times m}\)</span> 是正交矩阵</li>
+<li><span class="math inline">\(R \equiv\left[\begin{array}{l}\hat{R} \\ 0\end{array}\right] \in \mathbb{R}^{m \times n}\)</span></li>
+<li><span class="math inline">\(\hat{R} \in \mathbb{R}^{n \times n}\)</span> 是上三角矩阵</li>
+</ul>
+<p>其基本原理为<strong>格拉姆-施密特正交化</strong>。</p>
+<p><code>证明：</code></p>
+<p>定义向量的投影： <span class="math display">\[
+   \operatorname{proj}_{\mathbf{u}} \mathbf{a}=\frac{\langle\mathbf{u}, \mathbf{a}\rangle}{\langle\mathbf{u}, \mathbf{u}\rangle} \mathbf{u}
+\]</span></p>
+<p>其中<span class="math inline">\({\langle\mathbf{u}, \mathbf{a}\rangle}\)</span>为向量的内积。</p>
+<p>对于任意实方阵<span class="math inline">\(\mathbf{A}=(\mathbf{a_1},\mathbf{a_2},\ldots,\mathbf{a_n})\)</span>,对其列向量进行Gram-Schmidt正交化可得一组正交基<span class="math inline">\(\mathbf{Q}=(\mathbf{e_1},\mathbf{e_2},\ldots,\mathbf{e_n})\)</span>。</p>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/v2-db2b70e829ba299df005879b06165099_720w.jpg" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/v2-db2b70e829ba299df005879b06165099_720w.jpg" srcset="data:image/png;base64,666" alt="参考图" /><figcaption>参考图</figcaption>
+</figure>
+<p>​ 因此进行正交化有： <span class="math display">\[
+   \begin{array}{l}
+   \mathbf{u}_{1}=\mathbf{a}_{1} \\
+   \mathbf{u}_{2}=\mathbf{a}_{2}-\operatorname{proj}_{\mathbf{u}_{1}} \mathbf{a}_{2} \\
+   \mathbf{u}_{3}=\mathbf{a}_{3}-\operatorname{proj}_{\mathbf{u}_{1}} \mathbf{a}_{3}-\operatorname{proj}_{\mathbf{u}_{2}} \mathbf{a}_{3} \\
+   \vdots \\
+   \mathbf{u}_{k}=\mathbf{a}_{k}-\sum_{j=1}^{k-1} \operatorname{proj}_{\mathbf{u}_{j}} \mathbf{a}_{k}
+   \end{array}
+\]</span> ​ 单位化可得： <span class="math display">\[
+   \begin{aligned}
+   \mathbf{e}_{1} &amp;=\frac{\mathbf{u}_{1}}{\left\|\mathbf{u}_{1}\right\|} \\
+   \mathbf{e}_{2} &amp;=\frac{\mathbf{u}_{2}}{\left\|\mathbf{u}_{2}\right\|} \\
+   \mathbf{e}_{3} &amp;=\frac{\mathbf{u}_{3}}{\left\|\mathbf{u}_{3}\right\|} \\
+   &amp; \vdots \\
+   \mathbf{e}_{k} &amp;=\frac{\mathbf{u}_{k}}{\left\|\mathbf{u}_{k}\right\|}
+   \end{aligned}
+\]</span> ​ 此时方阵<span class="math inline">\(\mathbf{A}=(\mathbf{a_1},\mathbf{a_2},\ldots,\mathbf{a_n})\)</span>可表示为： <span class="math display">\[
+   \begin{aligned}
+   \mathbf{a}_{1} &amp;=\left\langle\mathbf{e}_{1}, \mathbf{a}_{1}\right\rangle \mathbf{e}_{1} \\
+   \mathbf{a}_{2} &amp;=\left\langle\mathbf{e}_{1}, \mathbf{a}_{2}\right\rangle \mathbf{e}_{1}+\left\langle\mathbf{e}_{2}, \mathbf{a}_{2}\right\rangle \mathbf{e}_{2} \\
+   \mathbf{a}_{3} &amp;=\left\langle\mathbf{e}_{1}, \mathbf{a}_{3}\right\rangle \mathbf{e}_{1}+\left\langle\mathbf{e}_{2}, \mathbf{a}_{3}\right\rangle \mathbf{e}_{2}+\left\langle\mathbf{e}_{3}, \mathbf{a}_{3}\right\rangle \mathbf{e}_{3} \\
+   &amp;: \\
+   \mathbf{a}_{k} &amp;=\sum_{j=1}^{k}\left\langle\mathbf{e}_{j}, \mathbf{a}_{k}\right\rangle \mathbf{e}_{j}
+   \end{aligned}
+\]</span> ​ 令： <span class="math display">\[
+   R=\left(\begin{array}{cccc}
+   \left\langle\mathbf{e}_{1}, \mathbf{a}_{1}\right\rangle &amp; \left\langle\mathbf{e}_{1}, \mathbf{a}_{2}\right\rangle &amp; \left\langle\mathbf{e}_{1}, \mathbf{a}_{3}\right\rangle &amp; \ldots \\
+   0 &amp; \left\langle\mathbf{e}_{2}, \mathbf{a}_{2}\right\rangle &amp; \left\langle\mathbf{e}_{2}, \mathbf{a}_{3}\right\rangle &amp; \ldots \\
+   0 &amp; 0 &amp; \left\langle\mathbf{e}_{3}, \mathbf{a}_{3}\right\rangle &amp; \ldots \\
+   \vdots &amp; \vdots &amp; \vdots &amp; \ddots
+   \end{array}\right)
+\]</span> ​ 因此有： <span class="math display">\[
+   \mathbf{A} = \mathbf{QR}=(\mathbf{e_1},\mathbf{e_2},\ldots,\mathbf{e_n})\left(\begin{array}{cccc}
+   \left\langle\mathbf{e}_{1}, \mathbf{a}_{1}\right\rangle &amp; \left\langle\mathbf{e}_{1}, \mathbf{a}_{2}\right\rangle &amp; \left\langle\mathbf{e}_{1}, \mathbf{a}_{3}\right\rangle &amp; \ldots \\
+   0 &amp; \left\langle\mathbf{e}_{2}, \mathbf{a}_{2}\right\rangle &amp; \left\langle\mathbf{e}_{2}, \mathbf{a}_{3}\right\rangle &amp; \ldots \\
+   0 &amp; 0 &amp; \left\langle\mathbf{e}_{3}, \mathbf{a}_{3}\right\rangle &amp; \ldots \\
+   \vdots &amp; \vdots &amp; \vdots &amp; \ddots
+   \end{array}\right)=(\mathbf{a_1},\mathbf{a_2},\ldots,\mathbf{a_n}).
+\]</span> ​ <span class="math inline">\(\mathbf{A} = \mathbf{QR}\)</span>得证。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/76703543">格拉姆-施密特正交化--QR分解法的来源</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/112327923">QR分解</a></p>
+</blockquote>
+<p><strong>四、</strong></p>
+<p>对于对称正定矩阵<span class="math inline">\(A\)</span>，可以有<span class="math inline">\(A=L L^{T}\)</span>。其<strong>基本原理为LU分解</strong>。</p>
+<p><code>证明：</code></p>
+<p>对于对称正定矩阵而言，可通过高斯消元法，得到唯一的Doolittle分解<span class="math inline">\(A=LU\)</span>.</p>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201007105209884.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201007105209884.png" srcset="data:image/png;base64,666" alt="image-20201007105209884" style="zoom:50%;" /></p>
+<p>将矩阵<span class="math inline">\(U\)</span>的对角线提出有，<span class="math inline">\(A=LD\overline{U}\)</span>,且<span class="math inline">\(A\)</span>为对称矩阵有<span class="math inline">\(LD\overline{U}=\overline{U^T}DL^T\)</span>,<strong>由分解的唯一性</strong>可得，<span class="math inline">\(\overline{U^T}=L\)</span>,可以得到<span class="math inline">\(A=LDL^T\)</span>. <span class="math display">\[
+U=\left[\begin{array}{ccccccccc}
+d_{1} &amp; &amp; &amp; &amp; \\
+&amp; d_{2} &amp; &amp; &amp; \\
+&amp; &amp; \ddots &amp; &amp; \\
+&amp; &amp; &amp; \ddots &amp; \\
+&amp; &amp; &amp; &amp; d_{n}
+\end{array}\right]\left[\begin{array}{ccccc}
+1 &amp; \frac{*}{d_{1}} &amp; \cdots &amp; \cdots &amp; \overline{d_{1}} \\
+&amp; 1 &amp; \frac{*}{d_{2}} &amp; \cdots &amp; \frac{*}{d_{2}} \\
+&amp; &amp; 1 &amp; \cdots &amp; \cdots \\
+&amp; &amp; &amp; \ddots &amp; \cdots \\
+&amp; &amp; &amp; &amp; 1
+\end{array}\right]=D \overline{U}
+\]</span> 由<span class="math inline">\(D=\sqrt{D} \cdot \sqrt{D}\)</span>，<span class="math inline">\(A=L D L^{T}=L \sqrt{D} \sqrt{D} L^{T}=L \sqrt{D} \sqrt{D}^{T} L^{T}=L \sqrt{D}(L \sqrt{D})^{T}\)</span>，证毕。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hanshihao1336295654/article/details/83422496">LU分解、LDLT分解、Cholesky分解</a></p>
+</blockquote>
+<p><strong>五、</strong></p>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/1466148-20180926111703698-902236733.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/1466148-20180926111703698-902236733.png" srcset="data:image/png;base64,666" alt="img" /><figcaption>img</figcaption>
+</figure>
+<p>源代码见<a target="_blank" rel="noopener" href="https://github.com/Divenire1998/vSLAM14_Practice">Github</a>的<code>eigenDataType.cpp</code>和<code>eigenSolveMatrix.cpp</code>.</p>
+<blockquote>
+<p>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/ymd12103410/p/9705792.html">Eigen解线性方程组</a></p>
+</blockquote>
+<h3 id="几何运算练习">几何运算练习</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171306589.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171306589.png" srcset="data:image/png;base64,666" alt="image-20201202171306589" style="zoom:67%;" /></p>
+<p><code>答：</code></p>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201203111139165.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201203111139165.png" srcset="data:image/png;base64,666" alt="image-20201203111139165"  /></p>
+<blockquote>
+<p>源代码见<a target="_blank" rel="noopener" href="https://github.com/Divenire1998/vSLAM14_Practice">Github</a>的coordinateTransform.cpp</p>
+</blockquote>
+<h3 id="旋转的表达">旋转的表达</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171328144.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171328144.png" srcset="data:image/png;base64,666" alt="image-20201202171328144" style="zoom:67%;" /></p>
+<p><strong>一、</strong></p>
+<p>已知<span class="math inline">\(\left(\boldsymbol e_{1}, \boldsymbol e_{2}\dots \boldsymbol e_{n}\right)\)</span>为<strong>标准正交基</strong>，坐标系<span class="math inline">\(\left(\boldsymbol e_{1}, \boldsymbol e_{2}\dots \boldsymbol e_{n}\right)\)</span>发生旋转后变为<span class="math inline">\(\left(\boldsymbol b_{1}, \boldsymbol b_{2}\dots \boldsymbol b_{n}\right)\)</span>,仍为<strong>标准正交基</strong>。</p>
+<blockquote>
+<p>基向量互相垂直就是正交基，每个基向量的模为1就是标准正交基。</p>
+</blockquote>
+<p>则旋转前后同一点的坐标可表示为 <span class="math display">\[
+   \left[\boldsymbol{e}_{1}, \boldsymbol{e}_{2},\dots \boldsymbol{e}_{n}\right]
+   \left[\begin{array}{c}
+   x_{1} \\
+   x_{2} \\
+   \vdots     \\
+   x_{n}
+   \end{array}\right]=
+   \left[{b}_{1}, {b}_{2},\dots {b}_{n}\right]
+   \left[\begin{array}{c}
+   y_{1} \\
+   y_{2} \\
+   \vdots     \\
+   y_{n}
+   \end{array}\right]
+\]</span></p>
+<p><span class="math display">\[
+\left[\begin{array}{c}
+   x_{1} \\
+   x_{2} \\
+   \vdots     \\
+   x_{n}
+   \end{array}\right]=
+   \left[\begin{array}{ccc}
+   e_{1}^{T} b_{1}  &amp;\dots &amp; e_{1}^{T} b_{n} \\
+   \vdots           &amp;\ddots&amp; \vdots \\
+   e_{n}^{T} b_{1}  &amp;\dots &amp; e_{n}^{T} b_{n}
+   \end{array}\right]
+   \left[\begin{array}{c}
+   y_{1} \\
+   y_{2} \\
+   \vdots     \\
+   y_{n}
+   \end{array}\right]=
+    R \boldsymbol{y}
+\]</span></p>
+<p>则有：</p>
+<p><span class="math display">\[
+   R^{T}R =
+   \left[\begin{array}{ccc}
+   b_{1}^{T} e_{1}  &amp;\dots &amp; b_{n}^{T} e_{1} \\
+   \vdots           &amp;\ddots&amp; \vdots \\
+   b_{1}^{T} e_{n}  &amp;\dots &amp; b_{n}^{T} e_{n}
+   \end{array}\right]
+   \left[\begin{array}{ccc}
+   e_{1}^{T} b_{1}  &amp;\dots &amp; e_{1}^{T} b_{n} \\
+   \vdots           &amp;\ddots&amp; \vdots \\
+   e_{n}^{T} b_{1}  &amp;\dots &amp; e_{n}^{T} b_{n}
+   \end{array}\right]
+\]</span></p>
+<p>对于对角线上的元素有：</p>
+<p><span class="math display">\[
+\begin{aligned}
+R^{T}R(i,i)  &amp;= b_{i}^{T} [\sum_{j=1}^n e_{j}e_{j}^{T}]b_{i}\\
+&amp;= b_{i}^{T} E b_{i}
+=1
+\end{aligned}
+\]</span></p>
+<p>非对角线上的元素有： <span class="math display">\[
+\begin{aligned}
+R^{T}R(i,j)  &amp;= b_{i}^{T} [\sum_{k=1}^n e_{k}e_{k}^{T}]b_{j}\\
+&amp;= b_{i}^{T} E b_{j}
+=0
+\end{aligned}
+\]</span></p>
+<p>因此<span class="math inline">\(R^{T}R =E\)</span>.</p>
+<p>上述公式表明，旋转矩阵<span class="math inline">\(R\)</span>把n维空间中的一组标准正交基转化成另一组标准正交基,将两组标准正交基分别用矩阵<span class="math inline">\(A\)</span>和<span class="math inline">\(B\)</span>表示。</p>
+<p>有<span class="math inline">\(RA=B\)</span>，且<span class="math inline">\(det(A) = det(B)=1\)</span>,因此<span class="math inline">\(det(R) = 1\)</span>.</p>
+<p>证毕。</p>
+<p><strong>二、</strong></p>
+<p><span class="math inline">\(dim(\varepsilon) = 1, dim(\eta) = 3\)</span></p>
+<p><strong>三、</strong></p>
+<p>由教材P57-3.24式可知： <span class="math display">\[
+   q_{1} q_{2}=\left[\begin{array}{c}
+   \eta_{1} \varepsilon_{2}+\eta_{2} \varepsilon_{1}+\varepsilon_{1} × \varepsilon_{2} \\
+   \eta_{1} \eta_{2}-\varepsilon_{1}^{T} \varepsilon_{2}
+   \end{array}\right]
+\]</span></p>
+<p><span class="math display">\[
+   q_{1}^{+} q_{2}=\left[\begin{array}{cc}
+   \eta_{1} 1+\varepsilon_{1}^{×} &amp; \varepsilon_{1} \\
+   -\varepsilon_{1}^{T} &amp; \eta_{1}
+   \end{array}\right]\left[\begin{array}{c}
+   \varepsilon_{2} \\
+   \eta_{2}
+   \end{array}\right]=\left[\begin{array}{c}
+   \varepsilon_{1} \eta_{2}+\left(\eta_{1}+\varepsilon_{1}^{×}\right) \varepsilon_{2} \\
+   \eta_{1} \eta_{2}-\varepsilon_{1}^{T} \varepsilon_{2}
+   \end{array}\right]=\left[\begin{array}{c}
+   \eta_{2} \varepsilon_{1}+\eta_{1} \varepsilon_{2}+\varepsilon_{1}× \varepsilon_{2} \\
+   \eta_{1} \eta_{2}-\varepsilon_{1}^{T} \varepsilon_{2}
+   \end{array}\right]=q_{1}  q_{2}
+\]</span></p>
+<p><span class="math display">\[
+   q_{2}^{\oplus} q_{1}=\left[\begin{array}{cc}
+   \eta_{2} 1 - \varepsilon_{2}^{×} &amp; \varepsilon_{2} \\
+   -\varepsilon_{2}^{T} &amp; \eta_{2}
+   \end{array}\right]\left[\begin{array}{c}
+   \varepsilon_{1} \\
+   \eta_{1}
+   \end{array}\right]=
+   \left[\begin{array}{c}
+   \varepsilon_{1} \eta_{2}+\left(\eta_{1}-\varepsilon_{2}^{×}\right) \varepsilon_{1} \\
+   \eta_{1} \eta_{2}-\varepsilon_{1}^{T} \varepsilon_{2}
+   \end{array}\right]=\left[\begin{array}{c}
+   \eta_{2} \varepsilon_{1}+\eta_{1} \varepsilon_{2}+\varepsilon_{1}× \varepsilon_{2} \\
+   \eta_{1} \eta_{2}-\varepsilon_{1}^{T} \varepsilon_{2}
+   \end{array}\right]=q_{1}q_{2}
+\]</span></p>
+<p>证毕。</p>
+<h3 id="罗德里格斯公式的证明">罗德里格斯公式的证明</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171358307.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171358307.png" srcset="data:image/png;base64,666" alt="image-20201202171358307" style="zoom:67%;" /></p>
+<p><code>证明:</code></p>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201007190641899.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201007190641899.png" srcset="data:image/png;base64,666" alt="image-20201007190641899" style="zoom: 67%;" /></p>
+<p>以上图为例子，矢量<span class="math inline">\(\boldsymbol r\)</span>绕着另一单位矢量<span class="math inline">\(\boldsymbol u\)</span> 转动角度<span class="math inline">\(\phi\)</span>，得到矢量<span class="math inline">\(\boldsymbol r’\)</span>。 <span class="math display">\[
+\overline{O^{\prime} B}=\boldsymbol{u} \times \boldsymbol{r}
+\]</span> 将矢量<span class="math inline">\(\boldsymbol r\)</span>分解为平行转轴与垂直转轴的分量，有：$r =r_{|}+r_{} $ <span class="math display">\[
+\begin{aligned}
+\boldsymbol r_{\|} &amp;=(\boldsymbol r \cdot \boldsymbol{u}) \boldsymbol{u} \\
+\boldsymbol r_{\perp}&amp;=\boldsymbol r - \boldsymbol r_{\|}=\boldsymbol r -(\boldsymbol r \cdot \boldsymbol{u}) \boldsymbol{u}
+\end{aligned}
+\]</span> 同理，对转动后的矢量进行分解与相似三角形原理有：<span class="math inline">\(\boldsymbol r^{\prime}=\boldsymbol r_{\|}^{\prime}+\boldsymbol r_{\perp}^{\prime}\)</span> <span class="math display">\[
+\boldsymbol r_{\|}^{\prime} =\boldsymbol r_{\|}  \\
+\]</span> <span class="math display">\[
+\begin{aligned}
+\boldsymbol r_{\perp}^{\prime} &amp;=\overline{O^{\prime} A} \cos \phi+\overline{O^{\prime} B} \sin \phi \\
+&amp;=[\boldsymbol r -(\boldsymbol r \cdot \boldsymbol{u}) \boldsymbol{u}]  \cos \phi + \boldsymbol u \times \boldsymbol r \sin \phi
+\end{aligned}
+\]</span></p>
+<p>代入可得： <span class="math display">\[
+\begin{aligned}
+r^{\prime} &amp;=\boldsymbol r \cos \phi -(\boldsymbol r \cdot \boldsymbol{u}) \boldsymbol{u}  \cos \phi + \boldsymbol u \times \boldsymbol r \sin \phi
+\end{aligned}
+\]</span> 对<span class="math inline">\((\boldsymbol r \cdot \boldsymbol{u}) \boldsymbol{u}\)</span>化简有： <span class="math display">\[
+(\boldsymbol r \cdot \boldsymbol{u}) \boldsymbol{u}=\boldsymbol{u}(\boldsymbol r \cdot \boldsymbol{u})=\boldsymbol{u} \boldsymbol{u^T}\boldsymbol r
+\]</span> 因此： <span class="math display">\[
+\begin{aligned}
+r^{\prime} &amp;=\boldsymbol r \cos \phi -\boldsymbol{u} \boldsymbol{u^T}\boldsymbol r  \cos \phi + \boldsymbol u \times \boldsymbol r \sin \phi \\
+&amp;=[ \cos \phi\boldsymbol I - \cos \phi\boldsymbol{u} \boldsymbol{u^T}   + \sin \phi\boldsymbol u \times  ]\boldsymbol r\\
+&amp;=\boldsymbol R \boldsymbol r
+\end{aligned}
+\]</span> 得证。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jingrui/p/9712461.html">参考</a></p>
+</blockquote>
+<h3 id="四元数运算性质的验证">四元数运算性质的验证</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171427022.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171427022.png" srcset="data:image/png;base64,666" alt="image-20201202171427022" style="zoom:67%;" /></p>
+<p>​ <strong>本题主要是使用四元数进行旋转变换时候的代数关系原理以及与旋转矩阵之间的转换。</strong></p>
+<p><code>证明:</code></p>
+<p><strong>一、</strong></p>
+<p>​ 设<span class="math inline">\(\boldsymbol p=(0,\boldsymbol v)\)</span>,旋转四元数<span class="math inline">\(\boldsymbol q = (\eta, \boldsymbol\varepsilon)\)</span>,则<span class="math inline">\(\boldsymbol q^{-1} = (\eta, -\boldsymbol\varepsilon)\)</span>。 <span class="math display">\[
+\boldsymbol p&#39;=
+\left[\begin{array}{c}
+\eta \\
+\boldsymbol  \varepsilon
+\end{array}\right]
+\left[\begin{array}{c}
+0 \\
+\boldsymbol  v
+\end{array}\right]
+\left[\begin{array}{c}
+\eta \\
+-\boldsymbol  \varepsilon
+\end{array}\right]=
+\left[\begin{array}{c}
+\eta \boldsymbol v +  \boldsymbol \varepsilon ×\boldsymbol v \\
+-\boldsymbol \varepsilon^{T} \boldsymbol v
+\end{array}\right]
+\left[\begin{array}{c}
+\eta \\
+-\boldsymbol  \varepsilon
+\end{array}\right]
+\]</span> ​ 其结果的实部为$v^{T} -^{T} v =0 $.因此旋转后的点为虚四元数。</p>
+<p><strong>二、</strong></p>
+<p>​ 由题意： <span class="math display">\[
+\begin{aligned}
+p^{\prime} &amp;=q p q^{-1} \\
+&amp;=q^{+} p^{+} q^{-1} \\
+&amp;=q^{+} q^{-1^{\oplus}} p \\
+\therefore Q &amp;=q^{+} q^{-1^{\oplus}}
+\end{aligned}
+\]</span></p>
+<p>​ 展开可得： <span class="math display">\[
+q^{+}=\left[\begin{array}{cc}
+   \eta+\epsilon^{\times} &amp; \varepsilon \\
+   -\varepsilon^{T} &amp; \eta
+   \end{array}\right]=\left[\begin{array}{cccc}
+   w &amp; -z &amp; y &amp; x \\
+   z &amp; w &amp; -x &amp; y \\
+   -y &amp; x &amp; w &amp; z \\
+   -x &amp; -y &amp; -z &amp; w
+   \end{array}\right]
+\]</span></p>
+<p><span class="math display">\[
+   q^{-1^{\ominus}}=\left[\begin{array}{cc}
+   \eta 1-(-\varepsilon)^{\times} &amp; -\varepsilon \\
+   -(-\varepsilon)^{T} &amp; \eta
+   \end{array}\right] /\|q\|^{2}=\frac{1}{\|q\|^{2}} \cdot\left[\begin{array}{cc}
+   \eta 1+\varepsilon^{\times} &amp; -\varepsilon \\
+   \varepsilon^{T} &amp; \eta
+   \end{array}\right]=\frac{1}{\|q\|^{2}} \cdot\left[\begin{array}{cccc}
+   w &amp; -z &amp; y &amp; -x \\
+   z &amp; w &amp; -x &amp; -y \\
+   -y &amp; x &amp; w &amp; -z \\
+   x &amp; y &amp; z &amp; w
+   \end{array}\right]
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+   Q&amp;=q^{+} q^{-1^{\oplus}}\\
+   &amp;=
+   \frac{1}{\|q\|^{2}}
+   \left[\begin{array}{cccc}
+   w^{2}+x^{2}-y^{2}+z^{2} &amp; 2 x y-2 z w &amp; 2 w y+2 x z &amp; 0 \\
+   2 x y+2 z w &amp; w^{2}-x^{2}+y^{2}-z^{2} &amp; 2 y z-2 x w &amp; 0 \\
+   2 x z-2 y w &amp; 2 y z+2 x w &amp; w^{2}-x^{2}-y^{2}+z^{2} &amp; 0 \\
+   0 &amp; 0 &amp; 0 &amp; w^{2}+x^{2}+y^{2}+z^{2}
+   \end{array}\right] 
+\end{aligned}
+\]</span></p>
+<h3 id="熟悉-c11">熟悉 C++11</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171520168.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171520168.png" srcset="data:image/png;base64,666" alt="image-20201202171520168" style="zoom:67%;" /></p>
+<p>​ <code>答案：</code></p>
+<ul>
+<li>在15行中，<code>vector&lt;A&gt; avec&#123;a1, a2, a3&#125;</code>使用列表进行vector对象的初始化。</li>
+<li>在16行中，<code>[](const A&amp;a1, const A&amp;a2) &#123;return a1.index&lt;a2.index;&#125;</code>为匿名lambda 表达式，实现avec 数组排序从小到大输出。</li>
+<li>在17行中，<code>for ( auto&amp; a: avec )</code> 包含了<code>auto自动类型推导</code>和<code>基于范围的for循环</code>.</li>
+</ul>
+<h2 id="课后习题">课后习题</h2>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202195446946.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202195446946.png" srcset="data:image/png;base64,666" alt="image-20201202195446946" /><figcaption>image-20201202195446946</figcaption>
+</figure>
+<h3 id="section">1.</h3>
+<p>​ <a href="#旋转的表达">见深蓝的课后习题《旋转的表达-1》</a></p>
+<h3 id="section-1">2.</h3>
+<p>​ <a href="#罗德里格斯公式的证明">见深蓝的课后习题《罗德里格斯公式的证明》</a></p>
+<h3 id="section-2">3.</h3>
+<p>​ <a href="#四元数运算性质的验证">见深蓝的课后习题《四元数运算性质的验证》</a></p>
+<h3 id="todo">4. Todo</h3>
+<p>​ <a href="">各种旋转表示法总结</a></p>
+<h3 id="section-3">5.</h3>
+<p>​ 使用Block.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">//提取矩阵的一部分的子矩阵，从一个很大的矩阵中，提取出右上角的2x2矩阵，然后赋值为I</span></span><br><span class="line">    <span class="comment">// 生成随机矩阵和随机向量</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> MATRIX_SIZE 6</span></span><br><span class="line">    Eigen::Matrix&lt;<span class="keyword">double</span>, MATRIX_SIZE, MATRIX_SIZE&gt; matrix_NN</span><br><span class="line">            = Eigen::MatrixXd::Random(MATRIX_SIZE, MATRIX_SIZE);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;-------------习题-------------&quot;</span>&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;matrix_NN&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"><span class="comment">//    Method 1 位操作</span></span><br><span class="line"><span class="comment">//    for (int i = MATRIX_SIZE-2; i &lt; MATRIX_SIZE; i++)</span></span><br><span class="line"><span class="comment">//    &#123;</span></span><br><span class="line"><span class="comment">//        for (int j = MATRIX_SIZE-2; j &lt; MATRIX_SIZE; j++)</span></span><br><span class="line"><span class="comment">//            matrix_NN(i,j) = 1;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//    Method 2 块操作</span></span><br><span class="line">    matrix_NN.block&lt;<span class="number">2</span>,<span class="number">2</span>&gt;(<span class="number">0</span>,<span class="number">4</span>) = Eigen::Matrix2d::Identity(<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;matrix_NN&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>源代码见<a target="_blank" rel="noopener" href="https://github.com/Divenire1998/vSLAM14_Practice">Github</a>的eigenDataType.cpp</p>
+</blockquote>
+<h3 id="section-4">6.</h3>
+<p>​ <a href="#熟悉%20Eigen%20矩阵运算">见深蓝的课后习题《熟悉Eigen矩阵运算-5》</a></p>
+<blockquote>
+<p>源代码见<a target="_blank" rel="noopener" href="https://github.com/Divenire1998/vSLAM14_Practice">Github</a>的eigenSolveMatrix.cpp</p>
+</blockquote>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2017/12/03/%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/'>
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://divenire.ltd/2020/11/30/SLAM/14%E8%AE%B2/ch2-%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8/>https://divenire.ltd/2020/11/30/SLAM/14%E8%AE%B2/ch2-%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-03T16:42:39+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年12月3日</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://divenire.ltd/2020/11/30/SLAM/14%E8%AE%B2/ch2-%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8/&title=ch2-三维空间的刚体运动 - Divenire's Bolg&summary=视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch3."
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://divenire.ltd/2020/11/30/SLAM/14%E8%AE%B2/ch2-%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8/&title=ch2-三维空间的刚体运动 - Divenire's Bolg&summary=视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch3."
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://divenire.ltd/2020/11/30/SLAM/14%E8%AE%B2/ch2-%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8/&title=ch2-三维空间的刚体运动 - Divenire's Bolg&summary=视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch3."
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
   
-    
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2020/11/29/SLAM/14%E8%AE%B2/ch1-%E6%A6%82%E8%BF%B0%E4%B8%8E%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/'>
+          <p class='title'>ch1-概述与预备知识<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch1和Ch2.
+
+深蓝的课后习题
+熟悉Linux
+
+熟悉Linux
+
+1. 如何在 Ubuntu 中安装软件(命令行界面)?...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
   
 
 
-    
-  
+
+
+
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -621,18 +1200,13 @@
     
       
         <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201117204835404.png'/>
+          <img no-lazy src='https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/TIM图片20200123173409.jpg'/>
         </a>
       
     
     
       <div class='text'>
         
-          <h2>sidebar blogger title</h2>
-        
-        
-          <p>sidebar blogger subtitle</p>
-
         
         
           <p><span id="jinrishici-sentence">Divenire's Bolg</span></p>
@@ -671,7 +1245,7 @@
           
         
           
-            <a href="/"
+            <a href="https://music.163.com/#/user/home?id=400473319"
               class="social fas fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -689,215 +1263,29 @@
   
     
     
-  
 
-  <section class="widget category shadow desktop">
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-            id="categoriesE4BA91E69C8DE58AA1E599A8"
-            ><div class='name'>云服务器</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E8%93%9D%E7%9A%84%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98"><span class="toc-text">深蓝的课后习题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%9F%E6%82%89-eigen-%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="toc-text">熟悉 Eigen 矩阵运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E8%BF%90%E7%AE%97%E7%BB%83%E4%B9%A0"><span class="toc-text">几何运算练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%8B%E8%BD%AC%E7%9A%84%E8%A1%A8%E8%BE%BE"><span class="toc-text">旋转的表达</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%97%E5%BE%B7%E9%87%8C%E6%A0%BC%E6%96%AF%E5%85%AC%E5%BC%8F%E7%9A%84%E8%AF%81%E6%98%8E"><span class="toc-text">罗德里格斯公式的证明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E8%BF%90%E7%AE%97%E6%80%A7%E8%B4%A8%E7%9A%84%E9%AA%8C%E8%AF%81"><span class="toc-text">四元数运算性质的验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%9F%E6%82%89-c11"><span class="toc-text">熟悉 C++11</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98"><span class="toc-text">课后习题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#section"><span class="toc-text">1.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-1"><span class="toc-text">2.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-2"><span class="toc-text">3.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#todo"><span class="toc-text">4. Todo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-3"><span class="toc-text">5.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-4"><span class="toc-text">6.</span></a></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/centOS/" style="font-size: 14px; color: #999">centOS</a> <a href="/tags/tomcat/" style="font-size: 14px; color: #999">tomcat</a>
-    </div>
-  </section>
-
-
-  
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-            id="categoriesE4BA91E69C8DE58AA1E599A8"
-            ><div class='name'>云服务器</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>3 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2020/11/03'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>1.4k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Wed Nov 18 2020 15:27:03 GMT+0800 (China Standard Time)</div>
-            <div id="last-update-show">2020-11-18 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2020-11-18 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
         
@@ -907,8 +1295,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="ch2-三维空间的刚体运动";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
@@ -939,8 +1327,8 @@
       fixed='false'
       list-max-height='320px'
       server='netease'
-      type='playlist'
-      id='3175833810'
+      type='song'
+      id='480780998'
       list-folded='true'>
     </meting-js>
   
@@ -1331,7 +1719,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   <script>
   let APlayerController = new Object();
-  APlayerController.id = '3175833810';  // 设定全局音乐播放ID
+  APlayerController.id = '480780998';  // 设定全局音乐播放ID
   APlayerController.volume = '0.7';
 </script>
 
