@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,9 +19,12 @@
 
   <!-- 页面元数据 -->
   
-  <title>分类：Cate - Divenire&#39;s Bolg</title>
+  <title>ch3-李群与李代数 - Divenire&#39;s Bolg</title>
   
 
+  
+    <meta name="description" content="视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch4.">
   
 
   <!-- feed -->
@@ -462,7 +463,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  search' style="display: none;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -538,81 +539,476 @@
       <div class='body-wrapper' id="pjax-container">
         
 
-
 <div class='l_main'>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-            <div class='post-wrapper'>
-              <div class="post post-v3 white-box reveal shadow">
-  
-  
-    <div class='pin'>
-      <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4cc.svg'/>
-    </div>
-  
-  
-  
-    
-    <h2 class="article-title" pin>
-      <a href="/2020/11/19/%E6%B5%8B%E8%AF%95/">
-        测试
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png'></a>
-        
-        <time>2020-11-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Cate/">Cate</a><span class="sep"></span><a class="category-link" href="/categories/Cate/SubCate/">SubCate</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/11/19/%E6%B5%8B%E8%AF%95/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
 
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        ch3-李群与李代数
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png">
+    <p>Divenire</p>
+  </a>
 </div>
 
-            </div>
           
         
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/SLAM/">SLAM</a><span class="sep"></span><a class="category-link" href="/categories/SLAM/14%E8%AE%B2/">14讲</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p> 2020年12月9日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.8k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：8分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
+      <div id="lc-pv" data-title="ch3-李群与李代数" data-path="/2020/12/10/SLAM/14%E8%AE%B2/ch3-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
     
+  </div>
+
+
+  
+  <p>视觉SLAM14讲的课后习题以及深蓝的习题解答。</p>
+<p>本节对应十四讲中的Ch4.</p>
+<a id="more"></a>
+<h2 id="深蓝的课后习题">深蓝的课后习题</h2>
+<h3 id="群的性质">群的性质</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171711843.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171711843.png" srcset="data:image/png;base64,666" alt="image-20201202171711843" style="zoom:80%;" /></p>
+<ul>
+<li><span class="math inline">\(\{ {\mathbb{Z},+}\}\)</span><strong>为群。</strong>
+<ul>
+<li>封闭性：<span class="math inline">\(\forall Z 1, Z 2 \in \mathbb{Z},(Z 1+Z 2) \in \mathbb{Z}\)</span>，即对于任意两个整数的加法仍为整数，满足条件。</li>
+<li>结合律：<span class="math inline">\(\forall Z 1, Z 2, Z 3 \in \mathbb{Z},(Z 1+Z 2)+Z 3=Z 1+(Z 2+Z 3)\)</span>，满足条件。</li>
+<li>幺元：<span class="math inline">\(\exists \mathrm{Z} 0 \in \mathbb{Z}, \mathrm{Z} 0=0, \forall \mathrm{Z} \in \mathrm{Z}, \mathrm{Z}+0=0+\mathrm{Z}=\mathrm{Z}\)</span>，满足条件。</li>
+<li>逆：<span class="math inline">\(\forall \mathrm{Z} \in \mathbb{Z}, \exists \mathrm{Z}^{-1} \in \mathbb{Z}, \mathrm{Z}^{-1}=-\mathrm{Z}, \mathrm{Z}+(-\mathrm{Z})=0\)</span>，满足条件。</li>
+</ul></li>
+<li><span class="math inline">\(\{\mathbb{N},+\}\)</span><strong>为不为群。</strong>
+<ul>
+<li>封闭性：与<span class="math inline">\(\{ {\mathbb{Z},+}\}\)</span>群同理，满足条件。</li>
+<li>结合律：与<span class="math inline">\(\{ {\mathbb{Z},+}\}\)</span>群同理，满足条件。</li>
+<li>幺元：与<span class="math inline">\(\{ {\mathbb{Z},+}\}\)</span>群同理，满足条件。</li>
+<li>逆：<strong>不存在</strong><span class="math inline">\(\forall \mathrm{N} \in \mathbb{N}, \exists \mathrm{N}^{-1} \in \mathbb{N}, \mathrm{N}^{-1}=-\mathrm{N}, \mathrm{N}+(-\mathrm{N})=C\)</span>，不满足条件。</li>
+</ul></li>
+</ul>
+<h3 id="验证向量叉乘的李代数性质">验证向量叉乘的李代数性质</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171724956.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171724956.png" srcset="data:image/png;base64,666" alt="image-20201202171724956" style="zoom:67%;" /></p>
+<p><strong>证明：</strong></p>
+<p>验证：<span class="math inline">\(\mathfrak{g}=\left(\mathbb{R}^{3}, \mathbb{R}, \times\right)\)</span>满足李代数的性质，设<span class="math inline">\(\boldsymbol {x}=(x_1, x_{2}, x_{3}),\boldsymbol {y}=(y_1, y_{2}, y_{3}),\boldsymbol {z}=(z_1, z_{2}, z_{3})\)</span>,其中<span class="math inline">\(\boldsymbol {x,y,z} \in \mathbb{R}^{3} , x_i,y_i,z_i \in R\)</span>.</p>
+<ul>
+<li>封闭性：</li>
+</ul>
+<p><span class="math display">\[
+[\boldsymbol x,\boldsymbol y]
+=\left|\begin{array}{lll}
+i &amp; j &amp; k \\
+x_{1} &amp; x_{2} &amp; x_{3} \\
+y_{1} &amp; y_{2} &amp; y_{3}
+\end{array}\right|
+=
+\left[\begin{array}{l}
+x_{2} y_{3}-x_{3} y_{2} \\
+x_{3} y_{1}-x_{1} y_{3} \\
+x_{1} y_{2}-x_{2} y_{1}
+\end{array}\right] \in \mathbb{R}^{3}
+\]</span></p>
+<p><strong>满足封闭性。</strong></p>
+<ul>
+<li>双线性：</li>
+</ul>
+<p><span class="math display">\[
+[a \boldsymbol{x}+b \boldsymbol{y}, \boldsymbol{z}]=
+(a \boldsymbol{x}+b \boldsymbol{y}) \times \boldsymbol{z}=
+a\boldsymbol{x} \times\boldsymbol{z} + b\boldsymbol{y} \times\boldsymbol{z}=
+a[\boldsymbol{x}, \boldsymbol{z}]+b[\boldsymbol{y}, \boldsymbol{z}]
+\]</span></p>
+<p><span class="math display">\[
+[ \boldsymbol{z},a \boldsymbol{x}+b \boldsymbol{y},]=
+ \boldsymbol{z} \times(a \boldsymbol{x}+b \boldsymbol{y}) =
+a\boldsymbol{z} \times\boldsymbol{x} + b\boldsymbol{z} \times\boldsymbol{y}=
+a[\boldsymbol{z}, \boldsymbol{x}]+b[\boldsymbol{z}, \boldsymbol{y}]
+\]</span></p>
+<p><strong>满足双线性。</strong></p>
+<ul>
+<li>自反性：</li>
+</ul>
+<p><span class="math display">\[
+[\boldsymbol x,\boldsymbol x]=\left|\begin{array}{lll}
+i &amp; j &amp; k \\
+x_{1} &amp; x_{2} &amp; x_{3} \\
+x_{1} &amp; x_{2} &amp; x_{3}
+\end{array}\right|
+=0
+\]</span></p>
+<p><strong>满足自反性。</strong></p>
+<ul>
+<li>雅可比等价：</li>
+</ul>
+<p>由<strong>矢量的二重叉积</strong>公式$ $,进行化简可得： <span class="math display">\[
+\begin{aligned}
+&amp;\quad [\boldsymbol{x},[\boldsymbol{y}, \boldsymbol{z}]]+[\boldsymbol{y},[\boldsymbol{x}, \boldsymbol{z}]]+[\boldsymbol{z},[\boldsymbol{x}, \boldsymbol{y}]]\\&amp;=
+\boldsymbol{(x \cdot z)y-(y \cdot z)x} + \boldsymbol{(y \cdot x)z-(z \cdot x)y}+\boldsymbol{(z \cdot y)x-(x \cdot y)z} 
+\\
+&amp;=0
+\end{aligned}
+\]</span> 证毕。</p>
+<h3 id="推导-se3-的指数映射">推导 SE(3) 的指数映射</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171739112.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171739112.png" srcset="data:image/png;base64,666" alt="image-20201202171739112" style="zoom:67%;" /></p>
+<p><strong>证明：</strong></p>
+<p>已知：</p>
+<ul>
+<li><span class="math inline">\(\boldsymbol{a}^{\wedge} \boldsymbol{a}^{\wedge}=\boldsymbol{a} \boldsymbol{a}^{T}-\boldsymbol{I}\)</span></li>
+<li><span class="math inline">\(\boldsymbol{a}^{\wedge} \boldsymbol{a}^{\wedge} \boldsymbol{a}^{\wedge}=-\boldsymbol{a}^{\wedge}\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{n=0}^{\infty} \frac{1}{(n+1) !}\left(\phi^{\wedge}\right)^{n} &amp;=I+\frac{1}{2 !} \theta \boldsymbol{a}^{\wedge}+\frac{1}{3 !} \theta^{2}\left(\boldsymbol{a}^{\wedge}\right)^{2}+\frac{1}{4 !} \theta^{3}\left(\boldsymbol{a}^{\wedge}\right)^{3}+\frac{1}{5 !} \theta^{4}\left(\boldsymbol{a}^{\wedge}\right)^{4} \ldots \\
+&amp;=\frac{1}{\theta}\left(\frac{1}{2 !} \theta^{2}-\frac{1}{4 !} \theta^{4}+\cdots\right)\left(\boldsymbol{a}^{\wedge}\right)+\frac{1}{\theta}\left(\frac{1}{3 !} \theta^{3}-\frac{1}{5!} \theta^{5}+\cdots\right)\left(\boldsymbol{a}^{\wedge}\right)^{2}+\boldsymbol{I} \\
+&amp;=\frac{1}{\theta}(1-\cos \theta)\left(\boldsymbol{a}^{\wedge}\right)+\frac{\theta-\sin \theta}{\theta}\left(\boldsymbol{a} \boldsymbol{a}^{T}-\boldsymbol{I}\right)+\boldsymbol{I} \\
+&amp;= \frac{\sin \theta}{\theta} \boldsymbol{I}+\left(1-\frac{\sin \theta}{\theta}\right) \boldsymbol{a} \boldsymbol{a}^{\mathrm{T} }+\frac{1-\cos \theta}{\theta} \boldsymbol{a}^{\wedge} {=} \boldsymbol{J}
+\end{aligned}
+\]</span></p>
+<p>证毕。</p>
+<h3 id="伴随">伴随</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171931993.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171931993.png" srcset="data:image/png;base64,666" alt="image-20201202171931993" style="zoom:67%;" /></p>
+<p><code>证明</code></p>
+<p>​ 对于任意的旋转矩阵<span class="math inline">\(\mathbf U\)</span>,以及向量<span class="math inline">\(\mathbf{a,b}\)</span>有： <span class="math display">\[
+( \mathbf{Ua}) \times( \mathbf{Ub})=\mathbf U(\mathbf{a} \times \mathbf{b})
+\]</span> ​ 因此有： <span class="math display">\[
+\begin{aligned}
+\boldsymbol{
+(R p)^{\wedge}v} &amp;= \boldsymbol{R  p \times v }\\
+&amp; = \boldsymbol{R  p \times (RR^Tv) } \\
+&amp; = \boldsymbol{R (p\times (R^Tv))}\\
+&amp; = \boldsymbol{Rp^{\wedge}R^Tv} 
+\end{aligned}
+\tag{1}
+\]</span> ​ 又由于： <span class="math display">\[
+\begin{aligned}
+e^{\left(T^{-1} A T\right)} &amp;=E+\sum_{k=1}^{\infty} \frac{\left(T^{-1} A T\right)^{k} }{k !} \\
+&amp;=E+\sum_{k=1}^{\infty} \frac{T^{-1} A^{k} T}{k !} \\
+&amp;=E+T^{-1}\left(\sum_{k=1}^{\infty} \frac{A^{k} }{k !}\right) T \\
+&amp;=T^{-1}\left(e^{A}\right) T
+\end{aligned}
+\]</span> ​ 因此对(1)式两边取指数有： <span class="math display">\[
+\boldsymbol{R} \exp \left(\boldsymbol{p}^{\wedge}\right) \boldsymbol{R}^{\mathrm{T} }=\exp \left((\boldsymbol{R} \boldsymbol{p})^{\wedge}\right)
+\]</span> ​ 得证。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/2190603/derivation-of-adjoint-for-so3">Derivation of Adjoint for SO(3)</a></p>
+<p><a target="_blank" rel="noopener" href="https://wenku.baidu.com/view/f3bd3477f18583d0496459f4.html">矩阵指数函数的性质与计算-学士学位论文-P15</a></p>
+</blockquote>
+<h3 id="轨迹的描绘">轨迹的描绘</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171946056.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202171946056.png" srcset="data:image/png;base64,666" alt="image-20201202171946056" style="zoom:67%;" /></p>
+<p>1、</p>
+<p>​ 机器人的运动轨迹<span class="math inline">\(T_{W C}\)</span>是机器人坐标系相对于世界坐标系的位姿，其包含两个旋转部分和平移部分。</p>
+<p>​ 其中平移部分<span class="math inline">\(t_{wc}\)</span>是从<strong>世界坐标系原点</strong>指向<strong>机器人坐标系原点</strong>的向量，在世界坐标系下的取值；其值等价于机器人坐标系原点在世界坐标系下的取值，即<span class="math inline">\(\boldsymbol t_{wc}\)</span>是机器人坐标系原点在世界坐标系下的坐标。</p>
+<hr />
+<p>2、</p>
+<p>​ 见<a target="_blank" rel="noopener" href="https://github.com/Divenire1998/vSLAM14_Practice/tree/master/ch3-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0">Github</a>文件。</p>
+<h3 id="轨迹的误差">轨迹的误差</h3>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202172029228.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202172029228.png" srcset="data:image/png;base64,666" alt="image-20201202172029228" style="zoom:67%;" /></p>
+<p>​ 见<a target="_blank" rel="noopener" href="https://github.com/Divenire1998/vSLAM14_Practice/tree/master/ch3-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0">Github</a>文件。</p>
+<h2 id="课后习题">课后习题</h2>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202170003497.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202170003497.png" srcset="data:image/png;base64,666" alt="image-20201202170003497" /><figcaption>image-20201202170003497</figcaption>
+</figure>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202170057407.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201202170057407.png" srcset="data:image/png;base64,666" alt="image-20201202170057407" /><figcaption>image-20201202170057407</figcaption>
+</figure>
+<h3 id="section">1、</h3>
+<p>​ <img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201208220618574.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201208220618574.png" srcset="data:image/png;base64,666" alt="image-20201208220618574" /></p>
+<h3 id="section-1">2.</h3>
+<p>​ 深蓝的课后习题-&gt;验证向量叉乘的李代数性质</p>
+<h3 id="section-2">3.</h3>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201208220644357.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201208220644357.png" srcset="data:image/png;base64,666" alt="image-20201208220644357" /><figcaption>image-20201208220644357</figcaption>
+</figure>
+<h3 id="section-3">4.</h3>
+<figure>
+<img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201208220718657.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201208220718657.png" srcset="data:image/png;base64,666" alt="image-20201208220718657" /><figcaption>image-20201208220718657</figcaption>
+</figure>
+<h3 id="section-4">5&amp;6.</h3>
+<p>​ 深蓝课后习题-&gt;伴随</p>
+<h3 id="section-5">7.</h3>
+<p>1、</p>
+<p>​ 对<span class="math inline">\(R\)</span>求取一次扰动<span class="math inline">\(\triangle R\)</span>，查看结果相对于扰动的变化率。设右扰动<span class="math inline">\(\triangle R\)</span>对应的李代数为<span class="math inline">\(\varphi\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\partial(\mathbf{R} \mathbf{p})}{\partial \varphi} &amp;=\lim _{\varphi \rightarrow 0} \frac{\mathbf{R} \exp \left(\varphi^{\wedge}\right) \mathbf{p}-\mathbf{R} \mathbf{p} }{\varphi} \\
+&amp;=\lim _{\varphi \rightarrow 0} \frac{\mathbf{R}\left(\mathbf{I}+\varphi^{\wedge}\right) \mathbf{p}-\mathbf{R} \mathbf{p} }{\varphi} \\
+&amp;=\lim _{\varphi \rightarrow \mathbf{0} } \frac{\mathbf{R} \varphi^{\wedge} \mathbf{p} }{\varphi}=\lim _{\varphi \rightarrow 0} \frac{-\mathbf{R} \mathbf{p}^{\wedge} \varphi}{\varphi}=-\mathbf{R} \mathbf{p}^{\wedge}
+\end{aligned}
+\]</span></p>
+<hr />
+<p>2、</p>
+<p><img src="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201208215440419.png" class="lazyload" data-srcset="https://tuchuang-1998.oss-accelerate.aliyuncs.com/Picgo/image-20201208215440419.png" srcset="data:image/png;base64,666" /></p>
+<h3 id="section-6">8.</h3>
+<p><code>FIND_PACKAGE( &lt;name&gt; [version] [EXACT] [QUIET] [NO_MODULE] [ [ REQUIRED | COMPONENTS ] [ componets... ] ] )</code></p>
+<p>​ 比较常用的参数如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">version参数</span><br><span class="line"></span><br><span class="line">需要一个版本号，它是正在查找的包应该兼容的版本号（格式是major[.minor[.patch[.tweak]]]）。</span><br><span class="line"></span><br><span class="line">EXACT选项</span><br><span class="line"></span><br><span class="line">要求版本号必须精确匹配。如果在find-module内部对该命令的递归调用没有给定[version]参数，那么[version]和EXACT选项会自动地从外部调用前向继承。对版本的支持目前只存在于包和包之间（详见下文）。</span><br><span class="line"></span><br><span class="line">QUIET 参数：</span><br><span class="line"></span><br><span class="line">会禁掉包没有被发现时的警告信息。对应于Find&lt;name&gt;.cmake模块中的 NAME_FIND_QUIETLY。</span><br><span class="line"></span><br><span class="line">REQUIRED 参数</span><br><span class="line"></span><br><span class="line">其含义是指是否是工程必须的，表示如果报没有找到的话，cmake的过程会终止，并输出警告信息。对应于Find&lt;name&gt;.cmake模块中的 NAME_FIND_REQUIRED 变量。</span><br><span class="line"></span><br><span class="line">COMPONENTS参数</span><br><span class="line"></span><br><span class="line">在REQUIRED选项之后，或者如果没有指定REQUIRED选项但是指定了COMPONENTS选项，在它们的后面可以列出一些与包相关（依赖）的部件清单（components list）</span><br><span class="line"></span><br><span class="line">示例：</span><br><span class="line"></span><br><span class="line">FIND_PACKAGE( libdb_cxx REQUIRED)</span><br><span class="line"></span><br><span class="line">这条命令执行后，CMake 会到变量 CMAKE_MODULE_PATH 指示的目录中查找文件 Findlibdb_cxx.cmake 并执行。</span><br></pre></td></tr></table></figure>
+<p>​ 命令<strong>find_package</strong>共有两种工作模式：模型模式和配置模式。</p>
+<ul>
+<li>指令模式</li>
+</ul>
+<p><strong><code>find_package()</code> 命令会在模块路径中寻找 Find<name>.cmake</strong> ，<strong>这是查找库的一个典型方式。首先CMake查看<code>$&#123;CMAKE_MODULE_PATH&#125;</code> 中的所有目录，然后再查看它自己的模块目录 <CMAKE_ROOT>/share/cmake-x.y/Modules/ 。</strong></p>
+<ul>
+<li>配置模式</li>
+</ul>
+<p>**配置模式试图查找一个由待查找的包提供的配置文件的位置。包含该文件的路径会被存储在一个名为<package>_DIR的条目李,如果在上述那些目录中没找到这样的文件，会寻找 <Name>Config.cmake 或者 <lower-case-name>-config.cmake ，它们是假定库会安装的文件（但是目前还没有多少库会安装它们）。不做检查，直接包含安装的库的固定值。**</p>
+<h2 id="参考">参考</h2>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/bytxl/article/details/50637277#">find_package与CMake如何查找链接库详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/haluoluo211/article/details/80559341">cmake教程4(find_package使用)</a></p>
+
+  
+  
     
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://divenire.ltd/2020/12/10/SLAM/14%E8%AE%B2/ch3-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0/>https://divenire.ltd/2020/12/10/SLAM/14%E8%AE%B2/ch3-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
         
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-09T20:10:50+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年12月9日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://divenire.ltd/2020/12/10/SLAM/14%E8%AE%B2/ch3-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0/&title=ch3-李群与李代数 - Divenire's Bolg&summary=视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch4."
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
       
     
-  </section>
-  
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://divenire.ltd/2020/12/10/SLAM/14%E8%AE%B2/ch3-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0/&title=ch3-李群与李代数 - Divenire's Bolg&summary=视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch4."
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
     
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://divenire.ltd/2020/12/10/SLAM/14%E8%AE%B2/ch3-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0/&title=ch3-李群与李代数 - Divenire's Bolg&summary=视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch4."
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2020/11/30/SLAM/14%E8%AE%B2/ch2-%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8/'>
+          <p class='title'>ch2-三维空间的刚体运动<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>视觉SLAM14讲的课后习题以及深蓝的习题解答。
+本节对应十四讲中的Ch3.
+
+深蓝的课后习题
+熟悉 Eigen 矩阵运算
+
+一、
+​ 由于\(A\)是方阵，因此\(Ax = b\)有唯一解的的...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
   
 
 
-    
-  
+
+
+
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -688,216 +1084,29 @@
   
     
     
-  
 
-  <section class="widget category shadow desktop">
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Cate/" href="/categories/Cate/"
-            id="categoriesCate"
-            ><div class='name'>Cate</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Cate/SubCate/" href="/categories/Cate/SubCate/"
-            id="categoriesCateSubCate"
-            ><div class='name'>SubCate</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/SLAM/" href="/categories/SLAM/"
-            id="categoriesSLAM"
-            ><div class='name'>SLAM</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/SLAM/14%E8%AE%B2/" href="/categories/SLAM/14%E8%AE%B2/"
-            id="categoriesSLAM14E8AEB2"
-            ><div class='name'>14讲</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/SLAM/ORB-SLAM2/" href="/categories/SLAM/ORB-SLAM2/"
-            id="categoriesSLAMORB-SLAM2"
-            ><div class='name'>ORB-SLAM2</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E5%AD%A6/" href="/categories/%E6%95%B0%E5%AD%A6/"
-            id="categoriesE695B0E5ADA6"
-            ><div class='name'>数学</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%B0%E5%AD%A6/%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%96/" href="/categories/%E6%95%B0%E5%AD%A6/%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%96/"
-            id="categoriesE695B0E5ADA6E99D9EE7BABFE680A7E4BC98E58C96"
-            ><div class='name'>非线性优化</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E8%93%9D%E7%9A%84%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98"><span class="toc-text">深蓝的课后习题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%A4%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-text">群的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E5%90%91%E9%87%8F%E5%8F%89%E4%B9%98%E7%9A%84%E6%9D%8E%E4%BB%A3%E6%95%B0%E6%80%A7%E8%B4%A8"><span class="toc-text">验证向量叉乘的李代数性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BC-se3-%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84"><span class="toc-text">推导 SE(3) 的指数映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%B4%E9%9A%8F"><span class="toc-text">伴随</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%A8%E8%BF%B9%E7%9A%84%E6%8F%8F%E7%BB%98"><span class="toc-text">轨迹的描绘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%A8%E8%BF%B9%E7%9A%84%E8%AF%AF%E5%B7%AE"><span class="toc-text">轨迹的误差</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98"><span class="toc-text">课后习题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#section"><span class="toc-text">1、</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-1"><span class="toc-text">2.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-2"><span class="toc-text">3.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-3"><span class="toc-text">4.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-4"><span class="toc-text">5&amp;6.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-5"><span class="toc-text">7.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-6"><span class="toc-text">8.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Blog/" style="font-size: 14px; color: #999">Blog</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a>
-    </div>
-  </section>
-
-
-  
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>6 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2020/11/03'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>9k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Wed Dec 09 2020 20:10:57 GMT+0800 (China Standard Time)</div>
-            <div id="last-update-show">2020-12-09 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2020-12-09 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
         
@@ -907,8 +1116,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="ch3-李群与李代数";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
